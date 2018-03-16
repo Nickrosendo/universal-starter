@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow:
+Sitemap: https://octadesk.com/sitemap.xml
+Disallow: /campanhas/
+Allow: /campanhas/sistema-atendimento-online-ad

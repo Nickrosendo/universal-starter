@@ -1,0 +1,161 @@
+<section id="materials-view">
+
+    <!--H1 SEO -->
+    <h1 class="titleHide"> Materias para helpdesk</h1>
+
+
+
+	<article class="od-Wrapper u-bgE7Gray">
+		<div class="container  od-Materials">
+			<div class="row">
+				<div class="col text-center">
+					<h2 class="h1 u-fontThin">O melhor conteúdo sobre atendimento no Octadesk</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="h4 mt-1">
+						<span class="pr-1 u-fontThin"> Filtrar por: </span>
+						<div class="dropdown d-inline-block">
+							<span class="text-warning u-fontThin" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span id="filter_text"> Todos </span> <i class="icon-angle-right u-transform d-inline-block"></i>
+							</span>
+
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a class="dropdown-item " (click)="filtra_todos()">Todos</a>
+								<a class="dropdown-item " (click)="filtra_apresentacao()">Apresentações</a>
+								<a class="dropdown-item " (click)="filtra_ebook()">Ebooks</a>
+								<a class="dropdown-item " (click)="filtra_planilha()">Planilhas</a>
+                <a class="dropdown-item " (click)="filtra_webinar()">Webinars</a>
+                <a class="dropdown-item " (click)="filtra_infografico()">Infográficos</a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="row flex-items-bottom">
+
+				<div [hidden]="filtroEbook" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+							<octadesk-ebook-satisfacao-cliente> </octadesk-ebook-satisfacao-cliente>
+						</div>
+					</div>
+				</div>
+
+
+				<div [hidden]="filtroEbook" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+							<octadesk-ebook-atendimento-cliente> </octadesk-ebook-atendimento-cliente>
+						</div>
+					</div>
+				</div>
+
+				<div [hidden]="filtroEbook" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+							<octadesk-ebook-qualidade-atendimento></octadesk-ebook-qualidade-atendimento>
+						</div>
+					</div>
+				</div>
+
+				<div [hidden]="filtroEbook" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+						<octadesk-ebook-pessoas></octadesk-ebook-pessoas>
+						</div>
+					</div>
+        </div>
+
+        <div [hidden]="filtroEbook" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+						<octadesk-ebook-jornada></octadesk-ebook-jornada>
+						</div>
+					</div>
+        </div>
+
+        <div [hidden]="filtroInfografico" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+						<octadesk-infografo-pessoas></octadesk-infografo-pessoas>
+						</div>
+					</div>
+        </div>
+
+        <div [hidden]="filtroInfografico" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+						<octadesk-infografo-processos></octadesk-infografo-processos>
+						</div>
+					</div>
+        </div>
+
+        <div [hidden]="filtroInfografico" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+						<octadesk-infografo-retencao></octadesk-infografo-retencao>
+						</div>
+					</div>
+        </div>
+
+        <div [hidden]="filtroInfografico" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+						<octadesk-infografo-satisfacao></octadesk-infografo-satisfacao>
+						</div>
+					</div>
+        </div>
+
+				<div [hidden]="filtroPlanilha" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+							<octadesk-planilha-atendimento-cliente></octadesk-planilha-atendimento-cliente>
+						</div>
+					</div>
+				</div>
+
+				<div [hidden]="filtroWebinar" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+							<octadesk-webinar></octadesk-webinar>
+						</div>
+					</div>
+				</div>
+
+
+				<div [hidden]="filtroApresentacao" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+							<octadesk-apresentacao-helpdesk></octadesk-apresentacao-helpdesk>
+						</div>
+					</div>
+				</div>
+
+				<div  [hidden]="filtroApresentacao" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+							<octadesk-material-kitfix></octadesk-material-kitfix>
+						</div>
+					</div>
+				</div>
+
+				<div  [hidden]="filtroApresentacao" class="col-lg-4 mt-2">
+					<div class="card card-md-height">
+						<div class="card-block text-center">
+							<octadesk-material-nfbox></octadesk-material-nfbox>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</article>
+
+</section>

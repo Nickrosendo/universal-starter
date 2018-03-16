@@ -1,0 +1,170 @@
+<section id="features-view">
+  <!--H1 SEO -->
+  <h1 class="titleHide"> Funcionalidades de um sistema de atendimento ao cliente</h1>
+
+	<!--Slide Funcionalidade-->
+	<article class="hidden-lg-down od-MenuSpace">
+		<div class="u-bgMediumGray" [ngClass]="{'od-MenuSecondary--freeze': freeze}">
+			<div class="container od-MenuSecondary">
+				<nav class="row nav">
+					<a class="col text-center nav-link" (click)="goTo('multicanal')" [class.active]="(activeClass == 'multicanal')">
+						<i class="icon-chat-o"></i>
+						<span>Multicanal</span>
+					</a>
+					<a class="col text-center nav-link" (click)="goTo('chamado')" [class.active]="(activeClass == 'chamado')">
+						<i class="icon-ticket-o"></i>
+						<span>Chamado</span>
+					</a>
+					<a class="col text-center nav-link" (click)="goTo('personalizacao')" [class.active]="(activeClass == 'personalizacao')">
+						<i class="icon-cog-o"></i>
+						<span>Personalização</span>
+					</a>
+					<a class="col text-center nav-link" (click)="goTo('automacoes')" [class.active]="(activeClass == 'automacoes')">
+						<i class="icon-workflow-o"></i>
+						<span>Automações</span>
+					</a>
+					<a class="col text-center nav-link" (click)="goTo('clientes-e-agentes')" [class.active]="(activeClass == 'clientes-e-agentes')">
+						<i class="icon-woman-o"></i>
+						<span>Clientes e agentes</span>
+					</a>
+					<a class="col text-center nav-link" (click)="goTo('gestao')" [class.active]="(activeClass == 'gestao')">
+						<i class="icon-donut-chart-o"></i>
+						<span>Gestão</span>
+					</a>
+					<a class="col text-center nav-link" (click)="goTo('apps-e-apis')" [class.active]="(activeClass == 'apps-e-apis')">
+						<i class="icon-development-o"></i>
+						<span>APPs e APIs</span>
+					</a>
+				</nav>
+			</div>
+		</div>
+	</article>
+
+	<!--MultiChannel-->
+	<a id="multicanal" class="u-anchor"></a>
+  <octadesk-multi-channel
+    [titulo]="'Centralize os múltiplos canais de contato e atenda de forma simples, rápida e organizada.'"
+    [bg-color-class]="'u-bgGreyX'"
+    [titulo-email]="'Crie chamados a partir de e-mails'"
+    [conteudo-email]="'Configure o encaminhamento das suas caixas de e-mail para o Octadesk e transforme automaticamente todo o atendimento ao cliente por e-mail em chamados.'"
+    [titulo-chat]="'Atendimento ao cliente em tempo real'"
+    [conteudo-chat]="'Sua equipe conversa simultaneamente com vários clientes, reduzindo o tempo de espera/resolução e ao mesmo tempo aumentando a satisfação de seus clientes.'"
+    [titulo-central-ajuda]="'Facilite a vida do seu cliente'"
+    [conteudo-central-ajuda]="'Seu cliente tem acesso a um portal de atendimento para abrir e acompanhar chamados. Assim, ele fica sempre informado e satisfeito com a transparência do atendimento ao cliente.'"
+    [titulo-base-conhecimento]="'Reduza o volume de chamados'"
+    [conteudo-base-conhecimento]="'Proporcione uma experiência de atendimento ao cliente mais transparente e eficiente, compartilhe informações do seu produto / serviço na sua base de conhecimento e antecipe as dúvidas dos clientes.'"
+    [titulo-telefone]="'Conecte sua central de atendimento telefônico'"
+    [conteudo-telefone]="'Crie automaticamente chamados com as gravações das ligações. Reduza riscos e aumente o controle dos atendimentos telefônicos.'"
+    [titulo-facebook]="'Gerencie seu canal do Facebook'"
+    [conteudo-facebook]="'Conecte uma ou mais páginas de Facebook e responda diretamente pelo Octadesk, mantendo sempre a organização, histórico e segurança daquilo que foi conversado.'"
+    [titulo-form-contato]="'Integre seu site'"
+    [conteudo-form-contato]="'Você pode integrar o formulário de contato do seu site para abrir chamados diretamente no Octadesk, facilitando a classificação, priorização e atribuição.'"
+  ></octadesk-multi-channel>
+
+	<article class="od-Wrapper u-bgLightGray">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xl-6 make-life-easear-text-align">
+					<h3 class="u-font-w700">Descomplique o seu atendimento, <br><span class="u-fontThin"> torne a vida do seu cliente mais fácil. </span></h3>
+				</div>
+				<div class="col col-lg-5 col-md-8">
+            <octadesk-avalie-form-email-field [gtm-form-id]="'experimente-gratis-header'"></octadesk-avalie-form-email-field>
+					<p class="mt-1 mb-0"> Avalie sem compromisso. Não pedimos cartão de crédito</p>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<!-- customize octadesk -->
+	<a id="chamado" class="u-anchor"></a>
+	<octadesk-customize
+	[titulo]="'Responda clientes rapidamente independente do canal de contato.'"
+	[sub-titulo]="'E-mails e outros canais de contato dos clientes abrem chamados automaticamente no Octadesk, assim todas as informações sobre o cliente e o histórico de relacionamento ficam centralizados em um único lugar.'"
+	[topico1]="'Gerencie de forma efetiva o seu atendimento ao cliente'"
+	[topico2]="'Elimine os problemas com e-mails compartilhados'"
+	[topico3]="'Acompanhe a produtividade da sua equipe de Help Desk'"
+	></octadesk-customize>
+
+	<!-- timeline -->
+	<octadesk-timeline></octadesk-timeline>
+
+	<!-- personalizacao octadesk -->
+  <a id="personalizacao" class="u-anchor"></a>
+	<article class="od-Wrapper od-Wrapper--cb od-BgCustomizeOctadesk">
+      <personalize-octadesk></personalize-octadesk>
+	</article>
+
+	<!-- plans from -->
+	<article class="od-Wrapper u-bgOrangeX">
+		<octadesk-plans-from [texto]="'Planos para todos os tipos e tamanhos de empresa'" [texto-botao]="'Conheça nossos planos'"></octadesk-plans-from>
+	</article>
+
+	<!-- Gain service scale -->
+	<a id="automacoes" class="u-anchor"></a>
+	<octadesk-gain-scale
+	[bg-Color]="'u-bgWhite'"
+	[titulo-header]="'Ganhe escala em seu atendimento ao cliente, deixe o'"
+	[titulo-header2]="'Octadesk trabalhar por você.'"
+	[img-alt1]="'Fluxos dinâmicos de atendimento'"
+
+	[topic-title1]="'Workflow'"
+	[topic-subtitle1]="'Crie fluxos dinâmicos de atendimento ao cliente e otimize seus processos'"
+	[topico1]="'Automatize etapas'"
+	[topico2]="'Priorize demandas corretamente'"
+	[topico3]="'Trabalhe com alçadas e aprovações em processos'"
+
+	[topic-title2]="'Regras automáticas'"
+	[topic-subtitle2]="'Ganhe velocidade no seu atendimento ao cliente'"
+	[topico4]="'Categorize e priorize chamados automaticamente'"
+	[topico5]="'Direcione para as áreas responsáveis'"
+	[topico6]="'Notifique o cliente por e-mail'"
+
+	[topic-title3]="'Respostas padrões'"
+	[topic-subtitle3]="'Melhore a produtividade da sua equipe'"
+	[topico7]="'Personalize o e-mail enviado para os seus clientes'"
+	[topico8]="'Crie bibliotecas de respostas padrões e ganhe agilidade'"
+	[topico9]="'Mantenha o padrão de qualidade do seu atendimento ao cliente'"
+
+	[topic-title4]="'Formulários inteligentes'"
+	[topic-subtitle4]="'Tenha processos mais inteligentes'"
+	[topico10]="'Crie formulários personalizados para cada cenário de atendimento'"
+	[topico11]="'Configure regras diferentes para cada formulário'"
+	[topico12]="'Torne sua operação mais inteligente e personalizada'"
+
+	[img-alt2]="'Formulários personalizados'"
+	></octadesk-gain-scale>
+
+	<!-- manage relationship -->
+	<a id="clientes-e-agentes" class="u-anchor"></a>
+	<octadesk-manage-relationship></octadesk-manage-relationship>
+
+	<!-- understand your service -->
+	<a id="gestao" class="u-anchor"></a>
+	<octadesk-understand
+	[cor-bg]="'od-ImgBgUnderstandYourService'"
+	[cor-bg-itens]="'u-bgWhite'"
+	[title]="'Entenda em detalhe sua operação de atendimento ao cliente'"
+	[subTitle]="'Tenha o controle do atendimento ao cliente na palma da sua mão, identifique problemas e melhore sua estratégia.'"
+	[tituloPrimeiroItem]="'Controle de prazos (SLA)'"
+	[conteudoPrimeiroItem]="'Controle o tempo de atendimento dos chamados (tempo utilizado, excedido e restante para resolver cada ocorrência).'"
+	[tituloSegundoItem]="'Métricas do seu atendimento'"
+	[conteudoSegundoItem]="'Acompanhe os indicadores de atendimento ao cliente por meio de relatórios personalizados e crie estratégias para seu negócio.'"
+	[tituloTerceiroItem]="'Satisfação do seu cliente'"
+	[conteudoTerceiroItem]="'Tenha clientes mais satisfeitos! Monitore a qualidade do atendimento ao cliente prestado por sua equipe a cada chamado finalizado.'"
+	[ImagemAlt1]="'Computador na tela dashboard do octadesk'"
+	[ImagemAlt2]="'Prazo de resolução (SLA)'"
+	[ImagemAlt3]="'Métricas do seu atendimento'"
+	[ImagemAlt4]="'Satisfação do seu cliente'"
+	></octadesk-understand>
+
+	<div class="container">
+		<hr>
+	</div>
+
+
+	<!-- apps-e-apis -->
+	<a id="apps-e-apis" class="u-anchor"></a>
+	<octadesk-apps-api></octadesk-apps-api>
+
+</section>
