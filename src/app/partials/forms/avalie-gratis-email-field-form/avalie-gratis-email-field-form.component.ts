@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-// import { Http } from '@angular/http';
+import { Http } from '@angular/http';
 
 import { WindowRef } from '../../windowRef';
 import { TryOctadeskModalComponent } from '../../modals/try-octadesk-modal/try-octadesk-modal.component';
@@ -36,7 +36,7 @@ export class AvalieGratisEmailFormFieldComponent implements OnInit {
 
   public form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,  private windowRef: WindowRef) {
+  constructor(private formBuilder: FormBuilder, private http: Http, private windowRef: WindowRef) {
   }
 
   hasSuccess: StatusField = {
@@ -129,12 +129,12 @@ export class AvalieGratisEmailFormFieldComponent implements OnInit {
       this.emailModel = this.email;
       this.email = '';
       this.windowRef.insertDataLayer('form-trial-experimente-o-octadesk-email');
-      // this.http.post('https://www.rdstation.com.br/api/1.3/conversions', this.form.value)
-      //   .subscribe(response => _this.openTrialModal());
+      this.http.post('https://www.rdstation.com.br/api/1.3/conversions', this.form.value)
+        .subscribe(response => _this.openTrialModal());
     } else {
       const keys = Object.keys(this.hasDanger);
       keys.forEach(key => {
-        if (_this.hasDanger[key] == undefined) {
+        if (_this.hasDanger[key] === undefined) {
           _this.hasDanger[key] = true;
         }
       });

@@ -16,7 +16,7 @@
 			>
 			<span class="input-group-btn"  (click)="validateEmail($event)">
 				<button type="submit" [ngClass]="{'btn-danger': hasDanger.email}" class="btn btn-success u-right-radius-md mt-0 font-size-default cursor-pointer">Avalie grátis</button>
-				<!-- <try-octadesk-modal [email]="emailModel" [gtm-form-id]="GtmFormId" [rd-identificator]="'form-trial-experimente-o-octadesk'" (onModalLeave)="onModalLeave($event)"></try-octadesk-modal> -->
+				<try-octadesk-modal [email]="emailModel" [gtm-form-id]="GtmFormId" [rd-identificator]="'form-trial-experimente-o-octadesk'" (onModalLeave)="onModalLeave($event)"></try-octadesk-modal>
 			</span>
 			<br>
 		</div>

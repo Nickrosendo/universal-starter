@@ -1,0 +1,15 @@
+export const lpRotas = [
+  '/sistema-help-desk-ad',
+  '/sistema-help-desk-adb',
+  '/sistema-atendimento-online-ad',
+  '/sistema-atendimento-online-adb',
+  '/sistema-de-chamados-ad',
+  '/gerenciador-de-contatos-ad',
+  '/gerenciador-de-contatos-adb',
+  '/sistema-de-atendimento-ao-cliente-ad',
+  '/sistema-de-atendimento-ao-cliente-adb',
+  '/sistema-de-suporte-ad',
+  '/cadastro-de-clientes-ad',
+  '/controle-de-clientes-ad',
+  '/programa-de-tickets-ad',
+];

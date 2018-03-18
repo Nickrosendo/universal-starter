@@ -1,0 +1,82 @@
+<section id="plans-view">
+
+
+	<!-- compare -->
+	<article class="od-Wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<h1 class="u-fontThin">Veja a tabela de funcionalidades de cada plano</h1>
+				</div>
+			</div>
+			<div class="text-right mt-2 hidden-sm-down">
+				<span class="od-RecommendedTag"><img src="/assets/images/plans/recommended-down.png" alt="Plano recomendado" title="Plano recomendado"></span>
+			</div>
+			<div class="od-TableCompare">
+				<table class="table table-hover od-Table od-Table--info" *ngFor="let category of categories[0]">
+
+					<thead class="thead-default od-Table-thead">
+						<tr>
+							<th class="text-info od-Table-column" [ngClass]="{'hidden-xs-down': (category.name == 'Planos') }">{{category.name}}</th>
+							<th class="text-center">
+								<!-- <span *ngIf="category.name == 'Planos'">R<span class="hidden-sm-down">iver</span></span> -->
+								<span *ngIf="category.name == 'Planos'">BÁSICO</span>
+							</th>
+							<th class="text-center">
+								<!-- <span *ngIf="category.name == 'Planos'">S<span class="hidden-sm-down">ea</span></span> -->
+								<span *ngIf="category.name == 'Planos'" class="hidden-md-up od-RecommendedTag-SM"><img src="/assets/images/plans/recommended-down.png" alt="Plano recomendado" title="Plano recomendado"></span>
+								<span *ngIf="category.name == 'Planos'">PLUS</span>
+							</th>
+							<th class="text-center">
+								<!-- <span *ngIf="category.name == 'Planos'">O<span class="hidden-sm-down">cean</span></span> -->
+								<span *ngIf="category.name == 'Planos'">AVANÇADO</span>
+							</th>
+						</tr>
+					</thead>
+					<tbody class="od-Table-tbody od-Table-tbody--sm">
+						<tr *ngFor="let item of items | filterBy:{category:category.code}">
+							<td class="od-Table-column" [ngClass]="{'hidden-xs-down': (item.name == 'AVALIE O OCTADESK') }">{{item.name}}</td>
+							<td class="text-info text-center od-Table-column od-TableCompare-column od-TableCompare-column--info" *ngFor="let plan of item.plans">
+
+								<i *ngIf="plan && plan.value == true" class="icon-check"></i>
+
+								<span *ngIf="plan && plan.value && plan.value != true && plan.value != '#consult' && plan.value != '#button'">
+									{{plan.value}}
+								</span>
+
+								<span *ngIf="plan && plan.value == '#button' && plan.action == 'createAccount'">
+										<a class="text-info hidden-md-up u-linkStyles" gtm-identificator="contato-content" (click)="opencontactCotacaoModal()">Contato</a>
+										<button type="button" class="btn btn-warning btn-sm w-100 hidden-sm-down" gtm-identificator="contato-content" (click)="opencontactCotacaoModal()">Contato</button>
+<!--
+									<a class="text-info hidden-md-up u-linkStyles" gtm-identificator="solicitar-avaliacao-content" (click)="openTrialModal()">Solicitar avaliação</a>
+									<button type="button" class="btn btn-warning btn-sm w-100 hidden-sm-down" gtm-identificator="solicitar-avaliacao-content" (click)="openTrialModal()">Solicitar avaliação</button> -->
+								</span>
+
+								<span *ngIf="plan && plan.value == '#button' && plan.action == 'contact'">
+									<a class="text-info hidden-md-up u-linkStyles" gtm-identificator="contato-content" (click)="opencontactCotacaoModal()">Contato</a>
+									<button type="button" class="btn btn-warning btn-sm w-100 hidden-sm-down" gtm-identificator="contato-content" (click)="opencontactCotacaoModal()">Contato</button>
+
+								</span>
+
+								<span *ngIf="plan && plan.value == '#consult'">
+									<span class="text-info hidden-md-up">+ infos</span>
+									<span class="text-info hidden-sm-down">Consulte-nos</span>
+
+								</span>
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<try-octadesk-modal [gtm-form-id]="'solicitar-avaliacao-content'" [rd-identificator]="'form-trial-experimente-o-octadesk'"></try-octadesk-modal>
+			<octadesk-contact-cotacao-modal [gtm-form-id]="'contato-content'" [rd-identificator]="'site-modal-contact-cotacao'"></octadesk-contact-cotacao-modal>
+			<div class="text-right mb-2 hidden-sm-down">
+				<span class="od-RecommendedTag"><img src="/assets/images/plans/recommended-up.png" alt="Plano recomendado" title="Plano recomendado"></span>
+			</div>
+		</div>
+	</article>
+
+
+
+</section>

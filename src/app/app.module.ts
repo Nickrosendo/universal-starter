@@ -2,18 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TransferHttpCacheModule } from '@nguniversal/common';
+import { HttpModule } from '@angular/http';
 
-//angular bootstrap
+// angular bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 
-//partials
+// partials
 import { PartialsModule } from './partials/partials.module';
 
-//layout core structures
+// layout core structures
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+
+// lazy load routes Array
+import { routes } from './lazyRoutesArray';
 
 @NgModule({
   declarations: [
@@ -24,13 +28,9 @@ import { FooterComponent } from './layout/footer/footer.component';
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
     NgbModule.forRoot(),
+    HttpModule,
     PartialsModule,
-    RouterModule.forRoot([
-      { path: '', loadChildren: './home/home.module#HomeModule' },
-      { path: 'funcionalidades/atendimento-ao-cliente', loadChildren: './features/features.module#FeaturesModule' },
-      { path: 'planos/sistema-de-chamados', loadChildren: './pricing/pricing.module#PricingModule' },
-      { path: 'materiais-para-helpdesk', loadChildren: './materials/materials.module#MaterialsModule' }
-    ]),
+    RouterModule.forRoot(routes),
     TransferHttpCacheModule,
   ],
   providers: [],
