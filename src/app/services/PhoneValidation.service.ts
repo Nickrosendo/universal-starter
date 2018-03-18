@@ -13,8 +13,7 @@ export class PhoneValidationService {
   validateNumber(number: any) {
 
     const headers = new Headers();
-    headers.append('Authorization', 'Basic QUNkYjVhYmJjZDA0YzRiMGI4OWI2Zjk5NmZiYzJjYmViMjo5MWIwNzU4NGQzODFjMjBhZjZhNjNlMWI2MjA2NTE5Mw===');
-    //base64Encoded String
+    // base64Encoded String
     const options = new RequestOptions({ headers });
     const url = `https://lookups.twilio.com/v1/PhoneNumbers/55-${number}?Type=carrier`;
     const __this = this;
