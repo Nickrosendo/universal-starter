@@ -1,0 +1,11 @@
+<img src="/assets/images/materials/imagem_lamina_kitfix.png" alt="Kitfix" title="kitfix" width="100%">
+<h4>KitFix</h4>
+<h4 class="u-fontThin">Assistência técnica e field service</h4>
+<button type="button" gtm-identificator="material-kitfix" (click)="downloadMaterialKitfixModal()" class="mt-1 btn btn-warning cursor-pointer">Baixar Apresentação</button>
+<octadesk-form-modal
+  [material-url]="'/documentos/material-kitfix-octadesk.pdf'"
+  [gtm-form-id]="'material-kitfix-conversion'"
+  [rd-identificator]="'site-materiais-kitfix'"
+  [modal-title]="'Kitfix assistência técnica e field service'"
+  [modal-submit-text]="'Baixar Apresentação'">
+</octadesk-form-modal>

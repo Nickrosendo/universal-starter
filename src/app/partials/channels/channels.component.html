@@ -1,0 +1,112 @@
+
+<ngb-tabset class="od-Channels-tabs mt-3" [ngStyle]="{'color': Color}">
+
+	<ngb-tab>
+		<ng-template ngbTabTitle>
+			 <i class="icon-envelope-o"></i> <span class="hidden-md-down">E-mail</span>
+		</ng-template>
+		<ng-template ngbTabContent>
+			<div class="od-Channel-highlight mb-2">
+				<img class="od-Channel-highlight-image" src="/assets/images/features/canal-email.png" alt="Canal de atendimento e-mail" title="e-mail como canal de atendimento">
+			</div>
+			<dl class="od-DescriptionList text-left">
+				<dt class="od-DescriptionList-title">{{TituloEmail}}</dt>
+				<dd class="od-DescriptionList-detail">{{ConteudoEmail}}</dd>
+			</dl>
+		</ng-template>
+	</ngb-tab>
+
+	<ngb-tab>
+		<ng-template ngbTabTitle>
+			<i class="icon-chat-o"></i> <span class="hidden-md-down">Chat</span>
+		</ng-template>
+		<ng-template ngbTabContent>
+			<div class="od-Channel-highlight mb-2">
+				<img class="od-Channel-highlight-image" src="/assets/images/features/canal-chat.png" alt="chat como canal de atendimento" title="canal de atendimento ao cliente - chat">
+			</div>
+			<dl class="od-DescriptionList text-left">
+				<dt class="od-DescriptionList-title">{{TituloChat}}</dt>
+				<dd class="od-DescriptionList-detail">{{ConteudoChat}}</dd>
+			</dl>
+			<button type="button" [routerLink]="['/chat-para-site']" class="btn btn-outline-warning float-left cursor-pointer">
+				Saiba mais <i class="icon-next"></i>
+			</button>
+		</ng-template>
+	</ngb-tab>
+
+	<ngb-tab>
+		<ng-template ngbTabTitle>
+			<i class="icon-help-center-o"></i> <span class="hidden-md-down">Central de ajuda</span>
+		</ng-template>
+		<ng-template ngbTabContent>
+			<div class="od-Channel-highlight mb-2">
+				<img class="od-Channel-highlight-image" src="/assets/images/features/canal-central-de-ajuda.png" alt="Central de ajuda - canal de atendimento ao cliente" title="Central de ajuda - canal de atendimento ao cliente">
+			</div>
+			<dl class="od-DescriptionList text-left">
+				<dt class="od-DescriptionList-title">{{TituloCentralAjuda}}</dt>
+				<dd class="od-DescriptionList-detail">{{ConteudoCentralAjuda}}</dd>
+			</dl>
+		</ng-template>
+	</ngb-tab>
+
+	<ngb-tab>
+		<ng-template ngbTabTitle>
+			<i class="icon-open-book-o"></i> <span class="hidden-md-down">Base de conhecimento</span>
+		</ng-template>
+		<ng-template ngbTabContent>
+			<div class="od-Channel-highlight mb-2">
+				<img class="od-Channel-highlight-image" src="/assets/images/features/canal-base-de-conhecimento.png" alt="Base de conhecimento - canal de atendimento" title="Canal de atendimento - base de conhecimentos">
+			</div>
+			<dl class="od-DescriptionList text-left">
+				<dt class="od-DescriptionList-title">{{TituloBaseConhecimento}}</dt>
+				<dd class="od-DescriptionList-detail">{{ConteudoBaseConhecimento}}</dd>
+			</dl>
+		</ng-template>
+	</ngb-tab>
+
+	<ngb-tab>
+		<ng-template ngbTabTitle>
+			<i class="icon-phone-o"></i> <span class="hidden-md-down">Telefone</span>
+		</ng-template>
+		<ng-template ngbTabContent>
+			<div class="od-Channel-highlight mb-2">
+				<img class="od-Channel-highlight-image" src="/assets/images/features/canal-telefone.png" alt="Canal de atendimento - telefone" title="Telefone - canal de atendimento ao cliente">
+			</div>
+			<dl class="od-DescriptionList text-left">
+				<dt class="od-DescriptionList-title">{{TituloTelefone}}</dt>
+				<dd class="od-DescriptionList-detail">{{ConteudoTelefone}}</dd>
+			</dl>
+		</ng-template>
+	</ngb-tab>
+
+	<ngb-tab>
+		<ng-template ngbTabTitle>
+			<i class="icon-facebook-o"></i> <span class="hidden-md-down">Facebook</span>
+		</ng-template>
+		<ng-template ngbTabContent>
+			<div class="od-Channel-highlight mb-2">
+				<img class="od-Channel-highlight-image" src="/assets/images/features/canal-facebook.png" alt="Facebook e redes sociais - canais de atendimento ao cliente" title="Canias de atendimento ao cliente - Facebook e redes sociais">
+			</div>
+			<dl class="od-DescriptionList text-left">
+				<dt class="od-DescriptionList-title">{{TituloFacebook}}</dt>
+				<dd class="od-DescriptionList-detail">{{ConteudoFacebook}}</dd>
+			</dl>
+		</ng-template>
+	</ngb-tab>
+
+	<ngb-tab>
+		<ng-template ngbTabTitle>
+			<i class="icon-form-o"></i> <span class="hidden-md-down">Formulário de contato</span>
+		</ng-template>
+		<ng-template ngbTabContent>
+			<div class="od-Channel-highlight mb-2">
+				<img class="od-Channel-highlight-image" src="/assets/images/features/canal-formulario-de-contato.png" alt="Formulário de contato - canal de atendimento ao cliente" title="Canal de atendimento - formulário de contato">
+			</div>
+			<dl class="od-DescriptionList text-left">
+				<dt class="od-DescriptionList-title">{{TituloFormContato}}</dt>
+				<dd class="od-DescriptionList-detail">{{ConteudoFormContato}}</dd>
+			</dl>
+		</ng-template>
+	</ngb-tab>
+
+</ngb-tabset>

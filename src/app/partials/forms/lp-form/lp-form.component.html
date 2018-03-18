@@ -1,0 +1,147 @@
+<form [id]="GtmFormIdentificator" class="om-OctadeskModal-form"  [formGroup]="form" (ngSubmit)="onSubmit($event)" autocomplete="off">
+  <input name="token_rdstation" type="hidden" />
+  <input name="identificador" type="hidden" />
+  <utm-hidden-fields></utm-hidden-fields>
+
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.name, 'has-danger': hasDanger.name}">
+        <label class="om-OctadeskModal-form-label">Nome</label>
+        <input
+          type="text"
+          name="nome"
+          class="om-OctadeskModal-form-field"
+          formControlName="nome"
+          placeholder="Nome"
+          [(ngModel)]="name"
+          (blur)="validateName($event)"
+          tabindex="1"
+          required
+          autofocus
+        />
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.name">O campo "Nome" precisa ser preenchido.</div>
+      </fieldset>
+
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.email, 'has-warning': hasWarning.email, 'has-danger': hasDanger.email}">
+        <label class="om-OctadeskModal-form-label">E-mail Comercial</label>
+        <input
+          type="email"
+          name="email"
+          class="om-OctadeskModal-form-field"
+          formControlName="email"
+          placeholder="E-mail Comercial"
+          [(ngModel)]="email"
+          (blur)="validateEmail($event)"
+          tabindex="2"
+          required
+        />
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.email">E-mail inválido. Verifique e digite novamente.</div>
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasWarning.email">Sugerimos a utilização de um e-mail corporativo.</div>
+      </fieldset>
+
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.phone, 'has-danger': hasDanger.phone}">
+        <label class="om-OctadeskModal-form-label">Telefone</label>
+
+        <input
+          type="tel"
+          name="telefone"
+          class="om-OctadeskModal-form-field"
+          formControlName="telefone"
+          placeholder="Telefone"
+          minlength="14"
+          maxlength="15"
+          [(ngModel)]="phone"
+          (blur)="validatePhone(); applyMask($event)"
+          tabindex="3"
+          phone-mask
+          required
+        />
+      <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.phone">Número de telefone inválido. Verifique e digite novamente.</div>
+      </fieldset>
+
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.companySite, 'has-danger': hasDanger.companySite}">
+        <label class="om-OctadeskModal-form-label">Site da empresa</label>
+        <input
+          type="text"
+          name="siteEmpresa"
+          class="om-OctadeskModal-form-field"
+          formControlName="siteEmpresa"
+          placeholder="Site da Empresa"
+          [(ngModel)]="companySite"
+          (blur)="validateCompany($event)"
+          tabindex="4"
+          required
+        />
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.companySite"> Site da Empresa inválido. Verifique e digite novamente.</div>
+      </fieldset>
+
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.cargos, 'has-danger': hasDanger.cargos}">
+        <label class="om-OctadeskModal-form-label">Cargo</label>
+        <select
+          class="om-OctadeskModal-form-field"
+          name="Qual é o seu cargo?"
+          formControlName="Qual é o seu cargo?"
+          [(ngModel)]="selectedCargo"
+          (blur)="validateCargos($event)"
+          (change)="validateCargos($event)"
+          tabindex="5"
+          required>
+          <option *ngFor="let cargo of cargoOptions" [disabled]="cargo.disabled" [value]="cargo.value">{{cargo.label}}</option>
+        </select>
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.cargos">O campo "Cargo" precisa ser preenchido.</div>
+      </fieldset>
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.departamentos, 'has-danger': hasDanger.departamentos}">
+        <label class="om-OctadeskModal-form-label">Departamento</label>
+        <select
+          class="om-OctadeskModal-form-field"
+          name="Departamento"
+          formControlName="Departamento"
+          [(ngModel)]="selectedDepartamento"
+          (blur)="validateDepartamento($event)"
+          (change)="validateDepartamento($event)"
+          tabindex="5"
+          required>
+          <option *ngFor="let departamento of departamentoOptions" [disabled]="departamento.disabled" [value]="departamento.value">{{departamento.label}}</option>
+        </select>
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.departamentos">O campo "Departamento" precisa ser preenchido.</div>
+      </fieldset>
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.totalEmployees, 'has-danger': hasDanger.totalEmployees}">
+        <label class="om-OctadeskModal-form-label">Número de Funcionários</label>
+        <select
+          class="om-OctadeskModal-form-field"
+          name="numero-de-funcionarios"
+          formControlName="numero-de-funcionarios"
+          [(ngModel)]="selectedTotalEmployees"
+          (blur)="validateTotalEmployees($event)"
+          (change)="validateTotalEmployees($event)"
+          tabindex="5"
+          required>
+          <option *ngFor="let employees of totalEmployeesOptions" [disabled]="employees.disabled" [value]="employees.value">{{employees.label}}</option>
+        </select>
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.totalEmployees">O campo "Número de Funcionários" precisa ser preenchido.</div>
+      </fieldset>
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.formaGerenciamento, 'has-danger': hasDanger.formaGerenciamento}">
+        <label class="om-OctadeskModal-form-label">Como você faz o gerenciamento de solicitações?</label>
+        <select
+          class="om-OctadeskModal-form-field"
+          name="Gerenciamento"
+          formControlName="Gerenciamento"
+          [(ngModel)]="selectedFormaGerenciamento"
+          (blur)="validateFormaGerenciamento($event)"
+          (change)="validateFormaGerenciamento($event)"
+          tabindex="5"
+          required>
+          <option *ngFor="let forma of formaDeGerenciamentoOptions" [disabled]="forma.disabled" [value]="forma.value">{{forma.label}}</option>
+        </select>
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.formaGerenciamento">O campo "Forma de gerenciar solicitações" precisa ser preenchido.</div>
+      </fieldset>
+
+
+  <fieldset class="om-OctadeskModal-form-fieldset">
+      <button
+    type="submit"
+    class="om-OctadeskModal-form-button om-OctadeskModal-form-button-success form-trial-button-success"
+    name="submit"
+    [value]="SubmitText">
+    {{SubmitText}}
+  </button>
+  </fieldset>
+</form>

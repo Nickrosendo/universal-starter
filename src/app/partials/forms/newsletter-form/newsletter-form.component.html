@@ -1,0 +1,36 @@
+<form class="mt-2" [formGroup]="form" (ngSubmit)="onSubmit($event)" *ngIf="!submitted" novalidate>
+    <input formControlName="token_rdstation" type="hidden" />
+    <input formControlName="identificador" type="hidden" />
+
+	<fieldset *ngIf="!SubSucces" [ngClass]="{'has-success': hasSuccess.email, 'has-warning': hasWarning.email, 'has-danger': hasDanger.email}">
+		<div class="input-group">
+			<input
+				type="email"
+				class="form-control"
+				formControlName="email"
+				placeholder="E-mail *"
+				[(ngModel)]="email"
+				(blur)="validateEmail($event)"
+				required
+			>
+			<span class="input-group-btn">
+				<button type="submit" class="btn btn-warning">Cadastrar</button>
+			</span>
+			<br>
+		</div>
+		<span class="mt-1 om-OctadeskModal-form-feedback" *ngIf="hasDanger.email">E-mail inválido. Verifique e digite novamente.</span>
+		<span class="mt-1 om-OctadeskModal-form-feedback" *ngIf="hasWarning.email">Sugerimos a utilização de um e-mail corporativo.</span>
+	</fieldset>
+
+
+
+</form>
+<div *ngIf="SubSucces">
+    <div style="width: 100%; border: 1px solid #ddd; border-radius: .25rem; padding: 1rem; padding-bottom: 0;">
+		<div class="u-alignCenter text-left text-success mb-1">
+			<i class="h1 icon-accept-o u-alignCenter-item"></i>
+			<strong class="u-alignCenter-item">Obrigado por assinar nossa newsletter</strong>
+		</div>
+		<p>Estamos construindo uma comunidade focada em melhorar o relacionamento com os clientes, investindo em educação, conteúdo, processos, sistema e principalmente pessoas.</p>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<img src="/assets/images/materials/imagem_lamina_nfbox.png" alt="NfBox" title="NfBox" width="100%">
+<h4>NfBox</h4>
+<h4 class="u-fontThin">Amplie sua capacidade de atendimento</h4>
+<button type="button" gtm-identificator="material-nfbox" (click)="downloadMaterialNfboxModal()" class="mt-1 btn btn-warning cursor-pointer">Baixar Apresentação</button>
+<octadesk-form-modal
+  [material-url]="'/documentos/material-nfbox-octadesk.pdf'"
+  [gtm-form-id]="'material-nfbox-conversion'"
+  [rd-identificator]="'site-materiais-nfbox'"
+  [modal-title]="'Nfbox amplie sua capacidade de atendimento'"
+  [modal-submit-text]="'Baixar Apresentação'">
+</octadesk-form-modal>

@@ -1,0 +1,145 @@
+
+<div class="row flex-items-bottom mt-4">
+	<!-- River -->
+	<div class="col-lg-4">
+		<div class="card od-ChoosePlan-item">
+			<div class="card-block text-center od-ChoosePlan-item-header">
+				<a [routerLink]="['/comparativo/controle-de-chamados']" class="cursor-pointer pricing-anchors">
+					<h3 class="card-title text-info u-font-W500">BÁSICO</h3>
+				</a>
+				<h6 class="card-subtitle">
+					<span class="u-fontThin">Para empresas que estão organizando sua <br>
+						<span class="u-font-W700"> primeira estrutura de atendimento.</span>
+					</span>
+				</h6>
+			</div>
+			<div class="card-block text-center od-ChoosePlan-item-detail">
+
+				<div class="od-ChoosePlan-item-detail-consulting u-font-W700">
+					consulte-nos
+				</div>
+				<p class="od-ChoosePlan-item-detail-cantact">Ligue <strong>(11) 2222-1422</strong> ou</p>
+				<div class="od-ChoosePlan-item-detail-actions">
+					<button type="button" class="btn btn-warning btn-lg" gtm-identificator="entre-em-contato-ocean" (click)="opencontactCotacaoModal()">Entre em contato</button>
+					<!--<a class="btn btn-warning btn-lg" href="http://setup.octadesk.com/create-account">Solicitar avaliação</a>-->
+				</div>
+			</div>
+			<div class="card-block od-ChoosePlan-item-features mt-1">
+				<ul class="od-ListType">
+					<li class="od-ListType-item">
+						<h5>Recursos disponíveis</h5>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['automacoes']" class="cursor-pointer pricing-anchors">Sistema de chamados e automação de tarefas</a>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['multicanal']" class="cursor-pointer pricing-anchors">Portal de acompanhamento para seus clientes</a>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['multicanal']" class="cursor-pointer pricing-anchors">Base de conhecimento</a>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['automacoes']" class="cursor-pointer pricing-anchors">Respostas pré-definidas (macros)</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Sea -->
+	<div class="col-lg-4">
+		<div class="card od-ChoosePlan-item mt-1-mobile">
+
+			<span class="PanelCard-soon">
+							<span class="PanelCard-soonBevel"></span> Mais popular
+			</span>
+
+			<div class="card-block text-center od-ChoosePlan-item-header od-ChoosePlan-item-header">
+				<a [routerLink]="['/comparativo/controle-de-chamados']" class="cursor-pointer pricing-anchors">
+					<h3 class="card-title text-info u-font-W500">PLUS</h3>
+				</a>
+				<h6 class="card-subtitle">
+					<span class="u-fontThin">Para empresas que já possuem uma estrutura<br>de atendimento,
+						<span class="u-font-W700">que procuram otimizar e <br>ganhar escala. </span>
+					</span>
+				</h6>
+			</div>
+			<div class="card-block text-center od-ChoosePlan-item-detail od-ChoosePlan-item-detail--highlight">
+
+				<div class="od-ChoosePlan-item-detail-consulting u-font-W700 text-white">
+					consulte-nos
+				</div>
+				<p class="od-ChoosePlan-item-detail-cantact">Ligue <strong>(11) 2222-1422</strong> ou</p>
+				<div class="od-ChoosePlan-item-detail-actions">
+					<button type="button" class="btn btn-warning btn-lg" gtm-identificator="entre-em-contato-ocean" (click)="opencontactCotacaoModal()">Entre em contato</button>
+					<!--<a class="btn btn-warning btn-lg" href="http://setup.octadesk.com/create-account">Solicitar avaliação</a>-->
+					<i class="icon-arrow-top-left"></i>
+				</div>
+			</div>
+			<div class="card-block od-ChoosePlan-item-features">
+				<ul class="od-ListType">
+					<li class="od-ListType-item">
+						<h5>Tudo do Básico, mais:</h5>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['personalizacao']" class="cursor-pointer pricing-anchors">Campos e formulários personalizados</a>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" class="cursor-pointer pricing-anchors">Horários, feriados e calendário de atendimento</a>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['gestao']" class="cursor-pointer pricing-anchors">Controle de SLA por diversos critérios</a>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['gestao']" class="cursor-pointer pricing-anchors">Relatórios personalizados</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Ocean -->
+	<div class="col-lg-4">
+		<div class="card od-ChoosePlan-item mt-1-mobile">
+			<div class="card-block text-center od-ChoosePlan-item-header">
+				<a [routerLink]="['/comparativo/controle-de-chamados']" class="cursor-pointer pricing-anchors">
+				<h3 class="card-title text-info u-font-W500">AVANÇADO</h3>
+				</a>
+				<h6 class="card-subtitle">
+					<span class="u-fontThin">Para empresas com <span class="u-font-W700"> fluxos e processos<br>complexos de atendimento</span>, que necessitam de integração com outros sistemas.</span>
+				</h6>
+			</div>
+			<div class="card-block text-center od-ChoosePlan-item-detail">
+				<div class="od-ChoosePlan-item-detail-consulting u-font-W700">
+					consulte-nos
+				</div>
+				<p class="od-ChoosePlan-item-detail-cantact">Ligue <strong>(11) 2222-1422</strong> ou</p>
+				<div class="od-ChoosePlan-item-detail-actions">
+					<button type="button" class="btn btn-warning btn-lg" gtm-identificator="entre-em-contato-ocean" (click)="opencontactCotacaoModal()">Entre em contato</button>
+					<octadesk-contact-cotacao-modal [gtm-form-id]="'entre-em-contato-ocean'" [rd-identificator]="'site-modal-contact-cotacao'"></octadesk-contact-cotacao-modal>
+
+				</div>
+			</div>
+			<div class="card-block od-ChoosePlan-item-features mt-1">
+				<ul class="od-ListType">
+					<li class="od-ListType-item">
+						<h5>Tudo do Plus, mais:</h5>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" class="cursor-pointer pricing-anchors">Multi-calendário e horários</a>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['automacoes']" class="cursor-pointer pricing-anchors">Workflow para fluxos de atendimento</a>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['automacoes']" class="cursor-pointer pricing-anchors">Formulários inteligentes</a>
+					</li>
+					<li class="od-ListType-item od-ListType-item--check od-ListType-item--bulletInfo">
+						<a class="cursor-pointer" [routerLink]="['/funcionalidades/atendimento-ao-cliente']" [fragment]="['apps-e-apis']" class="cursor-pointer pricing-anchors">Integrações e aplicativos</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,105 @@
+<octadesk-form-modal
+  [material-url]="materialUrl"
+  [gtm-form-id]="gtmFormId"
+  [rd-identificator]="rdIdentificator"
+  [modal-title]="modalTitle"
+  [modal-submit-text]="modalSubmitText">
+</octadesk-form-modal>
+<div class="text-center">
+	<nav class="nav">
+		<a class="text-center nav-link" [class.active]="carousel.activeId == 'slide-1'" (click)="selectSlide('slide-1')">
+			<span><img class="od-AppsNav--kitfix" src="/assets/images/features/logo-kitfix.png" alt="Logo KitFix" title="Logo KitFix"></span>
+		</a>
+		<a class="text-center nav-link" [class.active]="carousel.activeId == 'slide-2'" (click)="selectSlide('slide-2')">
+			<span><img class="od-AppsNav--nfbox" src="/assets/images/features/logo-nfbox.png" alt="Logo NFBox" title="Logo NFBox"></span>
+		</a>
+		<a class="text-center nav-link" [class.active]="carousel.activeId == 'slide-3'" (click)="selectSlide('slide-3')">
+			<span><img class="od-AppsNav--atendesimples" src="/assets/images/features/logo-atendesimples.png" alt="Logo Atende Simples" title="Logo Atende Simples"></span>
+		</a>
+		<a class="text-center nav-link" [class.active]="carousel.activeId == 'slide-4'" (click)="selectSlide('slide-4')">
+			<span><img class="od-AppsNav--octatimer" src="/assets/images/features/logo-octatimer.png" alt="Logo Octatimer" title="Logo Octatimer"></span>
+		</a>
+	</nav>
+</div>
+
+<ngb-carousel role="listbox" class="od-Apps mt-2">
+
+	<!-- Kitfix -->
+	<ng-template ngbSlide class="od-Apps-item" id="slide-1">
+		<div class="row d-flex align-items-center">
+			<div class="od-CurtFeatures-image-container">
+				<div class="mb-2">
+					<img class="od-Apps-item-logo" src="/assets/images/features/logo-kitfix.png" alt="Logo KitFix" title="Logo KitFix">
+				</div>
+
+				<p class="od-Apps-item-text"><strong>Integre todo o processo de atendimento ao cliente com serviços de assistência técnica.</strong></p>
+				<p class="od-Apps-item-text">A partir de um chamado é possível que um agente abra uma ou mais ordens de serviços para a ocorrência, determinando equipes ou técnicos específicos com controle de suas agendas.</p>
+				<button type="button" (click)="downloadMaterialKitfixModal()" class="btn btn-outline-info cursor-pointer">
+					Baixar apresentação<i class="icon-next"></i>
+        </button>
+			</div>
+			<div class="od-CurtFeatures-image-container flex-first flex-lg-last">
+				<img class="od-Apps-item-image" src="/assets/images/features/app-kitfix.png" alt="Tela do KitFix app" title="Tela do KitFix app">
+			</div>
+		</div>
+	</ng-template>
+
+	<!-- NFBox -->
+	<ng-template ngbSlide class="od-Apps-item" id="slide-2">
+		<div class="row d-flex align-items-center">
+			<div class="od-CurtFeatures-image-container">
+				<div class="mb-2">
+					<img class="od-Apps-item-logo od-Apps-item-logo--" src="/assets/images/features/logo-nfbox.png" alt="Logo NFBox" title="Logo NFBox">
+				</div>
+				<p class="od-Apps-item-text"><strong>Integre a sua operação de atendimento ao cliente, informações sobre notas fiscais, pedidos ou boletos bancários.</strong></p>
+				<p class="od-Apps-item-text">O NF Box torna-se um grande facilitador nos casos onde o atendimento ao cliente começa pela identificação de notas fiscais, boletos, pedidos e seus respectivos itens, agilizando a abertura de ocorrências ao obter em tempo real as informações do sistema de ERP.</p>
+				<button type="button" (click)="downloadMaterialNfboxModal()" class="btn btn-outline-info cursor-pointer">
+					Baixar apresentação<i class="icon-next"></i>
+				</button>
+
+			</div>
+			<div class="od-CurtFeatures-image-container flex-first flex-lg-last">
+				<img class="od-Apps-item-image" src="/assets/images/features/app-nfbox.png" alt="Tela do NFBox app" title="Tela do NFBox app">
+			</div>
+		</div>
+	</ng-template>
+
+	<!-- Atende simples -->
+	<ng-template ngbSlide class="od-Apps-item" id="slide-3">
+		<div class="row d-flex align-items-center">
+			<div class="od-CurtFeatures-image-container">
+				<div class="mb-2">
+					<img class="od-Apps-item-logo od-Apps-item-logo--" src="/assets/images/features/logo-atendesimples.png" alt="Logo Atende Simples" title="Logo Atende Simples">
+				</div>
+				<p class="od-Apps-item-text"><strong>Integre seu atendimento telefônico com o Octadesk e crie tickets a partir das ligações telefonicas.</strong></p>
+				<p class="od-Apps-item-text">Todo o histórico do atendimento telefônico fica registrado, criando chamados automaticamente de todas as ligações atendidas, perdidas e abandonadas, incluindo os áudios das ligações.</p>
+				<!--<button type="button" class="btn btn-outline-warning">
+					Saiba mais <i class="icon-next"></i>
+				</button>-->
+			</div>
+			<div class="od-CurtFeatures-image-container flex-first flex-lg-last">
+				<img class="od-Apps-item-image" src="/assets/images/features/app-atendesimples.png" alt="Ticket integrado ao Atende Simples" title="Ticket integrado ao Atende Simples">
+			</div>
+		</div>
+	</ng-template>
+
+	<!-- Octatimer -->
+	<ng-template ngbSlide class="od-Apps-item" id="slide-4">
+		<div class="row d-flex align-items-center">
+			<div class="od-CurtFeatures-image-container">
+				<div class="mb-2">
+					<img class="od-Apps-item-logo od-Apps-item-logo--" src="/assets/images/features/logo-octatimer.png" alt="Logo Octatimer" title="Logo Octatimer">
+				</div>
+				<p class="od-Apps-item-text"><strong>Gerencie as horas trabalhadas pela sua equipe nas solicitações de atendimento ao cliente.</strong></p>
+				<p class="od-Apps-item-text">Aponte as horas trabalhadas pela sua equipe, controle os esforços gastos em cada solicitação e identifique gargalos de atendimento ao cliente.</p>
+				<!--<button type="button" class="btn btn-outline-warning">
+					Saiba mais <i class="icon-next"></i>
+				</button>-->
+			</div>
+			<div class="od-CurtFeatures-image-container flex-first flex-lg-last">
+				<img class="od-Apps-item-image" src="/assets/images/features/app-octatimer.png" alt="Ticket integrado ao Octatimer" title="Ticket integrado ao Octatimer">
+			</div>
+		</div>
+	</ng-template>
+
+</ngb-carousel>

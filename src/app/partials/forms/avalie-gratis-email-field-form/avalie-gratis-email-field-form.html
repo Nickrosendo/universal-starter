@@ -1,0 +1,25 @@
+<form id="form-trial-experimente-o-octadesk-email" [formGroup]="form" (ngSubmit)="onSubmit($event)" autocomplete="off">
+	<input name="token_rdstation" type="hidden" />
+  <input formControlName="identificador" name="identificador" type="hidden" />
+  <utm-hidden-fields></utm-hidden-fields>
+
+	<fieldset [ngClass]="{'has-success': hasSuccess.email, 'has-danger': hasDanger.email,  'placeholder-danger': hasDanger.email}">
+		<div class="input-group">
+			<input
+				type="email"
+				class="form-control"
+				formControlName="email"
+				placeholder="Informe seu email"
+        [(ngModel)]="email"
+        (blur)="validateEmail($event)"
+				required
+			>
+			<span class="input-group-btn"  (click)="validateEmail($event)">
+				<button type="submit" [ngClass]="{'btn-danger': hasDanger.email}" class="btn btn-success u-right-radius-md mt-0 font-size-default cursor-pointer">Avalie grátis</button>
+				<!-- <try-octadesk-modal [email]="emailModel" [gtm-form-id]="GtmFormId" [rd-identificator]="'form-trial-experimente-o-octadesk'" (onModalLeave)="onModalLeave($event)"></try-octadesk-modal> -->
+			</span>
+			<br>
+		</div>
+	</fieldset>
+
+</form>

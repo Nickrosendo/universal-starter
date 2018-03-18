@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { PricingRouting } from './pricing-routing.module';
 import { PricingComponent } from './pricing.component';
 import { PartialsModule } from '../partials/partials.module';
 
 @NgModule({
 	imports: [
-		BrowserModule,
 		FormsModule,
 		ReactiveFormsModule,
 		NgbModule,
-		PricingRouting,
-		PartialsModule
+		PartialsModule,
+		RouterModule.forChild([
+			{ path: '', component: PricingComponent, pathMatch: 'full' }
+		]),
 	],
 	declarations: [
 		PricingComponent

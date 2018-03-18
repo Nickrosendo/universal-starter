@@ -1,0 +1,87 @@
+<form [id]="GtmFormIdentificator" class="om-OctadeskModal-form"  [formGroup]="form" (ngSubmit)="onSubmit($event)" autocomplete="off" novalidate>
+  <input name="token_rdstation" type="hidden" />
+  <input name="identificador" type="hidden" />
+  <utm-hidden-fields></utm-hidden-fields>
+
+<octadesk-success-go-to-features></octadesk-success-go-to-features>
+
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.name, 'has-danger': hasDanger.name}">
+        <label class="om-OctadeskModal-form-label">Nome</label>
+        <input
+          type="text"
+          name="nome"
+          class="om-OctadeskModal-form-field"
+          formControlName="nome"
+          placeholder="Nome"
+          [(ngModel)]="name"
+          (blur)="validateName($event)"
+          tabindex="1"
+          required
+          autofocus
+        />
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.name">O campo "Nome" precisa ser preenchido.</div>
+      </fieldset>
+
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.email, 'has-warning': hasWarning.email, 'has-danger': hasDanger.email}">
+        <label class="om-OctadeskModal-form-label">E-mail Comercial</label>
+        <input
+          type="email"
+          name="email"
+          class="om-OctadeskModal-form-field"
+          formControlName="email"
+          placeholder="E-mail Comercial"
+          [(ngModel)]="email"
+          (blur)="validateEmail($event)"
+          tabindex="2"
+          required
+        />
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.email">E-mail inválido. Verifique e digite novamente.</div>
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasWarning.email">Sugerimos a utilização de um e-mail corporativo.</div>
+      </fieldset>
+
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.phone, 'has-danger': hasDanger.phone}">
+        <label class="om-OctadeskModal-form-label">Telefone</label>
+
+        <input
+          type="tel"
+          name="telefone"
+          class="om-OctadeskModal-form-field"
+          formControlName="telefone"
+          placeholder="Telefone"
+          minlength="14"
+          maxlength="15"
+          [(ngModel)]="phone"
+          (blur)="validatePhone(); applyMask($event)"
+          tabindex="3"
+          phone-mask
+          required
+        />
+      <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.phone">Número de telefone inválido. Verifique e digite novamente.</div>
+      </fieldset>
+
+      <fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.companySite, 'has-danger': hasDanger.companySite}">
+        <label class="om-OctadeskModal-form-label">Site da empresa</label>
+        <input
+          type="text"
+          name="siteEmpresa"
+          class="om-OctadeskModal-form-field"
+          formControlName="siteEmpresa"
+          placeholder="Site da Empresa"
+          [(ngModel)]="companySite"
+          (blur)="validateCompany($event)"
+          tabindex="4"
+          required
+        />
+        <div class="om-OctadeskModal-form-feedback" *ngIf="hasDanger.companySite"> Site da Empresa inválido. Verifique e digite novamente.</div>
+      </fieldset>
+
+  <fieldset class="om-OctadeskModal-form-fieldset">
+      <button
+    type="submit"
+    class="om-OctadeskModal-form-button om-OctadeskModal-form-button-success form-trial-button-success"
+    name="submit"
+    [value]="SubmitText">
+    {{SubmitText}}
+  </button>
+  </fieldset>
+</form>

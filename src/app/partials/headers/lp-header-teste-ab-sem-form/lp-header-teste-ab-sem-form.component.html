@@ -1,0 +1,29 @@
+<header class="od-Wrapper u-bgLightGray od-lpHeaderSemForm pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-md-12">
+        <a [hidden]="hideLogo" class="navbar-brand hidden-md-down" [routerLink]="['/']">
+          <img src="/assets/images/logo-octadesk.png" width="153" height="34" alt="logo octadesk" title="Logo octadesk">
+        </a>
+        <h1 class="text-left u-font-W300 mt-1">
+          {{Titulo}}
+        </h1>
+        <p class="text-left ">
+          {{SubTitulo}}
+        </p>
+        <div class="col-lg-8 col-md-12 d-flex flex-column">
+          <a class="btn btn-success text-white cursor-pointer" (click)="openFreeTrialModal()"> AVALIE GRÁTIS</a>
+          <try-octadesk-modal
+            [gtm-form-id]="GtmFormIdentificator"
+            [rd-identificator]="RdIdentificator">
+          </try-octadesk-modal>
+          <a [routerLink]="['/funcionalidades/atendimento-ao-cliente']" class="btn btn-warning mt-1"> VEJA NOSSAS FUNCIONALIDADES</a>
+          <a [routerLink]="['/planos/sistema-de-chamados']" class="btn btn-warning mt-1"> CONHEÇA NOSSOS PLANOS</a>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12 hidden-md-down">
+        <img class="header-lp-sem-form-img" src="{{imageHeader}}" alt="{{AltHeader}}">
+      </div>
+    </div>
+  </div>
+</header>

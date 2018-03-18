@@ -1,0 +1,19 @@
+<div class="container u-alignCenter od-ComparePlans">
+  <p class="u-alignCenter-item u-cta od-ComparePlans-text"><strong>Não consegue decidir qual o plano ideal para você?</strong></p>
+  <div class="u-alignCenter-item u-cta od-SaleOff-actions">
+    <a [routerLink]="['/comparativo/controle-de-chamados']" gtm-identificator="compare-nossos-planos-content" class="btn btn-outline-info"
+      role="button">Compare nossos planos</a>
+  </div>
+  <a class="cursor-pointer" (click)="openContactModal()">
+    <div class="contact-support-container">
+      <div class="rounded-circle contact-support-thumb ml-1">
+        <img src="/assets/images/consultora-octadesk.jpg" alt="Consultora octadesk" title="Consultora octadesk">
+      </div>
+      <div class="Support-Contact ">
+        <p class="text-purple u-m0"><strong>Tire suas dúvidas <i class="icon-next"></i></strong></p>
+        <p class="u-m0 u-font-size-sm">Converse com um de nossos consultores</p>
+      </div>
+    </div>
+  </a>
+  <octadesk-contact-consultores-modal [gtm-form-id]="'fale-com-nossos-consultores-header'" [rd-identificator]="'site-modal-contact'" ></octadesk-contact-consultores-modal>
+</div>

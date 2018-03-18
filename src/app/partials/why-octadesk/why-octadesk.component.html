@@ -1,0 +1,39 @@
+<div class="container od-WhyOctadesk">
+	<div class="row">
+		<div class="col text-center">
+			<h2 class="h1 u-fontThin">Por que utilizar o Octadesk?</h2>
+		</div>
+	</div>
+	<div class="row d-flex align-items-center">
+		<div class="col-lg-6 col-xl-5">
+			<ul class="od-ListType mt-2">
+				<li class="od-ListType-item od-ListType-item--icon">
+					<i class="icon-medal-o"></i>
+					<span class="u-fontThin">Ganhe agilidade e qualidade</span>
+				</li>
+				<li class="od-ListType-item od-ListType-item--icon">
+					<i class="icon-woman-o"></i>
+					<span class="u-fontThin">Atenda seus clientes de forma personalizada</span>
+				</li>
+				<li class="od-ListType-item od-ListType-item--icon">
+					<i class="icon-happy-face-o"></i>
+					<span class="u-fontThin">Melhore a experiência e escale o seu Help Desk</span>
+				</li>
+				<li class="od-ListType-item od-ListType-item--icon">
+					<i class="icon-result-o"></i>
+					<span class="u-fontThin">Gerencie sua equipe com mais eficiência</span>
+				</li>
+				<li class="od-ListType-item od-ListType-item--icon">
+					<i class="icon-money-bag-o"></i>
+					<span class="u-fontThin">Venda mais com um bom atendimento ao cliente</span>
+				</li>
+			</ul>
+			<button type="button" class="btn btn-success mt-1 cursor-pointer" gtm-identificator="agende-uma-demonstracao-content" (click)="openContactModal()">Agende uma demonstração</button>
+			<i class="icon-arrow-top-left text-warning"></i>
+			<octadesk-contact-modal [gtm-form-id]="'agende-demonstracao-content'" [rd-identificator]="'site-modal-demo-home'"></octadesk-contact-modal>
+		</div>
+		<div class="col-lg-6 col-xl-7">
+			<img class="od-WhyOctadesk-img mt-2" src="/assets/images/home/octadesk-dashboard.png" alt="Computador na tela dashboard do octadesk" title="Computador na tela dashboard do octadesk">
+		</div>
+	</div>
+</div>

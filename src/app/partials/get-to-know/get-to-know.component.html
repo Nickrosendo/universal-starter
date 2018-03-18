@@ -1,0 +1,11 @@
+<div class="container u-alignCenter od-GetToKnow">
+	<p class="h3 u-fontThin u-alignCenter-item u-cta od-GetToKnow-text">
+		Conheça o Octadesk e descubra como podemos ajudar sua empresa.
+	</p>
+	<div class="u-alignCenter-item u-cta od-GetToKnow-actions">
+		<button type="button" gtm-identificator="agendar-demonstracao-content" [class]="BtnClass" (click)="openContactModal()">
+			Agendar demonstração
+		</button>
+		<octadesk-contact-modal [gtm-form-id]="'agendar-demonstracao-content'" [rd-identificator]="'site-modal-demo-funcionalidades'"></octadesk-contact-modal>
+	</div>
+</div>

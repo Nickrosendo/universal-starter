@@ -1,0 +1,32 @@
+<header [ngClass]="{'mt-0': hideLogo }" class="od-Wrapper u-bgLightGray od-lpHeaderComForm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-md-12">
+        <a [hidden]="hideLogo" class="navbar-brand hidden-md-down" [routerLink]="['/']">
+          <img src="/assets/images/logo-octadesk.png" width="153" height="34" alt="logo octadesk" title="Logo octadesk">
+        </a>
+        <h1 class="text-left u-font-W300 mt-1">
+          {{Titulo}}
+        </h1>
+        <p class="text-left ">
+          {{SubTitulo}}
+        </p>
+        <img class="hidden-md-down header-lp-img" src="{{imageHeader}}" alt="{{AltHeader}}">
+      </div>
+      <div class="col-lg-5 col-md-12">
+        <octadesk-lps-form-template
+          [titulo]="FormTitle"
+          [sub-titulo]="FormSubTitle"
+          [gtm-form-id]="GtmFormIdentificator"
+          [rd-identificador]="RdIdentificator"
+          [texto-submit]="TxtSubmit"
+          [titulo-form]="FormTitle"
+          [subtitulo-form]="FormSubTitle"
+          [under-cta]="UnderCta"
+          [download-ebook-url]="DownloadEbookUrl">
+        </octadesk-lps-form-template>
+      </div>
+    </div>
+    <!--- testimonials -->
+  </div>
+</header>

@@ -1,0 +1,19 @@
+<octadesk-modal [custom-class]="'om-OctadeskModal-content--static'"></octadesk-modal>
+<ng-template #YouTubeVideoModal let-c="close" let-d="dismiss" windowClass="">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="om-OctadeskModal-hidden">
+        <defs>
+            <g id="om-OctadeskModal-icon--close">
+                <path d="M614.4 512l390.4-390.4c25.6-25.6 25.6-70.4 0-102.4-25.6-25.6-70.4-25.6-102.4 0l-390.4 390.4-390.4-390.4c-25.6-25.6-70.4-25.6-102.4 0-25.6 25.6-25.6 70.4 0 102.4l390.4 390.4-390.4 390.4c-25.6 25.6-25.6 70.4 0 102.4 25.6 25.6 70.4 25.6 102.4 0l390.4-390.4 390.4 390.4c25.6 25.6 70.4 25.6 102.4 0 25.6-25.6 25.6-70.4 0-102.4l-390.4-390.4z"></path>
+            </g>
+        </defs>
+    </svg>
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe width="1280" height="720" [src]="SafeUrlVideo" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<button type="button" class="om-OctadeskModal-close om-OctadeskModal-close--out" title="close" aria-label="Close" (click)="d('Cross click')">
+        <svg viewBox="0 0 1024 1024" width="10" height="30">
+            <use xlink:href="#om-OctadeskModal-icon--close"></use>
+        </svg>
+    </button>
+</ng-template>
+<ng-template ngbModalContainer></ng-template>

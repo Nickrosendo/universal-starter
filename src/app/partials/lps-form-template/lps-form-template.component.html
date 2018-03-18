@@ -1,0 +1,21 @@
+<div class="jumbotron bg-lp-form-template py-1">
+  <h3 class="text-center u-font-W500">{{Titulo}}</h3>
+  <h5 class="text-center u-font-W500">{{SubTitulo}}</h5>
+  <octadesk-success-go-to-features></octadesk-success-go-to-features>
+  <octadesk-lp-form *ngIf=" Formulario == 'lp-form' ||  Formulario == undefined "
+    [gtm-form-id]="GtmFormIdentificator"
+    [rd-identificador]="RdIdentificator"
+    [submit-text]="TxtSubmit"
+    (onSubmitted)="onSubmitted($event)"
+    ></octadesk-lp-form>
+
+  <octadesk-lp-form-teste-ab *ngIf=" Formulario == 'lp-form-teste-ab'"
+    [gtm-form-id]="GtmFormIdentificator"
+    [rd-identificador]="RdIdentificator"
+    [submit-text]="TxtSubmit"
+    ></octadesk-lp-form-teste-ab>
+
+  <p class="text-center u-font-W300 mt-1"> {{UnderCta}}</p>
+</div>
+
+

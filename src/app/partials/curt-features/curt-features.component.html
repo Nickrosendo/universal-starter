@@ -1,0 +1,46 @@
+<nav class="row nav" [hidden]="carouselData.length === 0">
+  <a *ngFor="let item of carouselData[1]" class="col text-center nav-link" (click)="selectSlide(item.slide)" [class.active]="selectMenu(item.slide)">
+		<i [class]="item.icon"></i>
+		<span class="hidden-md-down">{{item.description}}</span>
+	</a>
+</nav>
+
+<ngb-carousel role="listbox" class="od-CurtFeatures">
+  <ng-template ngbSlide *ngFor="let slide of carouselData[0]" [id]="slide.id" class="od-CurtFeatures-item">
+    <div class="row d-flex align-items-center">
+      <div class="od-CurtFeatures-image-container">
+        <img class="od-CurtFeatures-item-image" [src]="slide.img.url" [alt]="slide.img.title" [title]="slide.img.title">
+      </div>
+
+      <div class="od-CurtFeatures-content">
+        <h3 class="od-CurtFeatures-item-title" *ngIf="slide.description.title">{{slide.description.title}}</h3>
+        <p class="od-CurtFeatures-item-text" *ngIf="slide.description.highlight"><strong>{{slide.description.highlight}}</strong></p>
+        <p class="od-CurtFeatures-item-text" *ngIf="slide.description.detail">{{slide.description.detail}}</p>
+        <ul class="od-ListType" *ngIf="slide.benefits.length">
+          <li *ngFor="let benefit of slide.benefits">{{benefit}}</li>
+        </ul>
+        <div class="row">
+          <button gtm-identificator="saiba-mais-funcionalidades-content" type="button" class="btn btn-outline-info button-align-center-xs cursor-pointer"
+            *ngIf="slide.button" [routerLink]="slide.button.link" [fragment]="slide.button.fragment">
+
+              Saiba mais <i class="icon-next"></i>
+            </button>
+          <div class="contact-support-container-curt">
+            <a class="cursor-pointer" (click)="openContactModal()">
+              <div class="rounded-circle contact-support-thumb ml-1">
+                <img src="/assets/images/consultora-octadesk.jpg" alt="Consultora octadesk" title="Consultora octadesk">
+              </div>
+              <div class="Support-Contact">
+                <p class="text-purple u-m0"><strong>Tire suas dúvidas <i class="icon-next"></i></strong></p>
+                <p class="u-m0 u-font-size-sm">Converse com um de nossos consultores</p>
+              </div>
+            </a>
+          </div>
+          <octadesk-contact-consultores-modal [gtm-form-id]="'fale-com-nossos-consultores-header'" [rd-identificator]="'site-modal-consultores-casos-de-sucesso'"></octadesk-contact-consultores-modal>
+
+        </div>
+      </div>
+    </div>
+
+  </ng-template>
+</ngb-carousel>

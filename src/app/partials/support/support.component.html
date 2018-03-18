@@ -1,0 +1,39 @@
+<div class="container od-Support">
+	<div class="row d-flex align-items-center">
+		<div class="col-md-6 od-Wrapper od-Support-item od-Support-item--border">
+			<h4 class="od-Support-item-title">Suporte sempre disponível para te atender</h4>
+			<p class="od-Support-item-text">
+				Queremos que você tenha a melhor experiência de atendimento,<br> até quando estiver com problemas ou dúvidas!
+			</p>
+			<div class="od-BoxAlpha">
+				<span class="od-BoxAlpha-text">
+					<i class="icon-phone-o"></i> (11) 2222-1422
+				</span>
+			</div>
+			<div class="od-BoxAlpha">
+				<a class="od-BoxAlpha-text" href="mailto:suporte@octadesk.com?Subject=Suporte%20site%20octadesk">
+					<i class="icon-envelope-o"></i> suporte@octadesk.com
+				</a>
+			</div>
+		</div>
+		<div class="col-md-6 col-xl-5 push-xl-1 od-Wrapper od-Support-item">
+			<h4 class="od-Support-item-title od-Support-item-title--spacer">Agende uma demonstração</h4>
+			<div class="row d-flex align-items-center od-Support-item-showing">
+				<div class="col-4 col-lg-3">
+					<div class="rounded-circle od-Support-item-showing-thumb">
+						<img src="/assets/images/consultora-octadesk.jpg" width="100%" height="100%" alt="Consultora octadesk" title="Consultora octadesk">
+					</div>
+				</div>
+				<div class="col-8">
+					<p class="text-left od-Support-item-text">
+						Conheça os recursos do Octadesk e descubra como podemos ajudar sua empresa a atender melhor.
+					</p>
+				</div>
+			</div>
+			<div class="od-Support-item-actions--spacer">
+				<button type="button" class="btn btn-warning" gtm-identificator="solicitar-demonstracao-footer" (click)="open()">Solicitar demonstração</button>
+			</div>
+			<octadesk-contact-modal [gtm-form-id]="'solicitar-demonstracao-footer'" [rd-identificator]="'site-modal-demo-suporte'"></octadesk-contact-modal>
+		</div>
+	</div>
+</div>

@@ -2,7 +2,8 @@
   <div class="row">
     <div class="col-12 col-lg-6 col-xl-5" *ngIf="router.url.indexOf('/contato') == -1">
       <div class="mb-1">
-        <h5 class="u-font-W300">Queremos que você tenha a melhor experiência de<br> atendimento, até quando estiver com problemas ou dúvidas!
+        <h5 class="u-font-W300">Queremos que você tenha a melhor experiência de
+          <br> atendimento, até quando estiver com problemas ou dúvidas!
         </h5>
       </div>
       <div class="row d-flex align-items-center">
@@ -16,9 +17,11 @@
         <div class="col-9">
           <a class="cursor-pointer" (click)="openContactModal()">
             <div class="support-balloon">
-              <h6 class="mb-0 text-purple u-font-W500">Tire suas dúvidas<i class="icon-next"></i></h6>
+              <h6 class="mb-0 text-purple u-font-W500">Tire suas dúvidas
+                <i class="icon-next"></i>
+              </h6>
               <p class="mb-0 u-font-W500">Converse com um dos nossos consultores</p>
-              <octadesk-contact-consultores-modal [gtm-form-id]="'fale-com-nossos-consultores-header'" [rd-identificator]="'site-modal-consultores-casos-de-sucesso'"></octadesk-contact-consultores-modal>
+              <!-- <octadesk-contact-consultores-modal [gtm-form-id]="'fale-com-nossos-consultores-header'" [rd-identificator]="'site-modal-consultores-casos-de-sucesso'"></octadesk-contact-consultores-modal> -->
             </div>
           </a>
         </div>
@@ -32,7 +35,7 @@
           <p class="text-sm-right mb-0 text-purple u-font-W700">(11) 2222-1422</p>
         </div>
       </div>
-      <octadesk-contact-form [gtm-form-id]="'mini-form-contato-footer'" [rd-identificador]="'site-contato-footer'"></octadesk-contact-form>
+      <!-- <octadesk-contact-form [gtm-form-id]="'mini-form-contato-footer'" [rd-identificador]="'site-contato-footer'"></octadesk-contact-form> -->
       <hr class="hidden-lg-up">
     </div>
     <div class="col-12 col-lg-6 col-xl-7 no-margin-od-ListType-item">
@@ -42,7 +45,9 @@
           <nav>
             <ul class="od-ListType od-ListType--fontSmall float-right">
               <li class="od-ListType-item mb-1">
-                <h6><strong>Produto</strong></h6>
+                <h6>
+                  <strong>Produto</strong>
+                </h6>
               </li>
               <li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
                 <a class="od-ListType-link" [routerLink]="['/funcionalidades/atendimento-ao-cliente']">Funcionalidades</a>
@@ -57,7 +62,9 @@
                 <a class="od-ListType-link" [routerLink]="['/casos-de-sucesso/sistema-de-atendimento']">Casos de sucesso</a>
               </li>
               <li class="od-ListType-item mt-3">
-                <h6><strong>Materiais</strong></h6>
+                <h6>
+                  <strong>Materiais</strong>
+                </h6>
               </li>
               <li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
                 <a class="od-ListType-link" target="_blank" href="https://blog.octadesk.com/">Blog</a>
@@ -122,7 +129,9 @@
             <ul class="od-ListType od-ListType--fontSmall">
 
               <li class="od-ListType-item mb-1">
-                <h6><strong>Soluções</strong></h6>
+                <h6>
+                  <strong>Soluções</strong>
+                </h6>
               </li>
               <li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
                 <a class="od-ListType-link" [routerLink]="['/atendimento-ao-cliente']">Atendimento ao cliente</a>
@@ -137,7 +146,9 @@
                 <a class="od-ListType-link" [routerLink]="['/sistema-de-chamados']">Sistema de chamados</a>
               </li>
               <li class="od-ListType-item mt-3">
-                <h6><strong>Comparativos</strong></h6>
+                <h6>
+                  <strong>Comparativos</strong>
+                </h6>
               </li>
               <li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
                 <a class="od-ListType-link" [routerLink]="['/concorrentes/zendesk']">Zendesk</a>
@@ -153,7 +164,9 @@
           <ul class="od-ListType od-ListType--fontSmall">
 
             <li class="od-ListType-item mb-1">
-              <h6><strong>Institucional</strong></h6>
+              <h6>
+                <strong>Institucional</strong>
+              </h6>
             </li>
 
             <li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
@@ -162,7 +175,7 @@
 
             <li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
               <a class="od-ListType-link cursor-pointer" gtm-identificator="solicitar-demonstracao-footer" (click)="openContactModal()">Solicite uma demonstração</a>
-              <octadesk-contact-consultores-modal [rd-identificator]="'site-modal-contact'"></octadesk-contact-consultores-modal>
+              <!-- <octadesk-contact-consultores-modal [rd-identificator]="'site-modal-contact'"></octadesk-contact-consultores-modal> -->
             </li>
             <li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
               <a class="od-ListType-link" [routerLink]="['/contato']">Contato</a>
@@ -170,10 +183,16 @@
 
 
             <li class="od-ListType-item mt-5">
-              <h6><strong>Parceiros</strong></h6>
+              <h6>
+                <strong>Parceiros</strong>
+              </h6>
             </li>
-            <li class="od-ListType-item mt-1"><img src="/assets/images/microsoft.png" alt="Logo Microsoft" title="Logo Microsoft"></li>
-            <li class="od-ListType-item mt-2"><img src="assets/images/endeavor.png" alt="Logo Endeavor" title="Logo Endeavor"></li>
+            <li class="od-ListType-item mt-1">
+              <img src="/assets/images/microsoft.png" alt="Logo Microsoft" title="Logo Microsoft">
+            </li>
+            <li class="od-ListType-item mt-2">
+              <img src="assets/images/endeavor.png" alt="Logo Endeavor" title="Logo Endeavor">
+            </li>
           </ul>
         </div>
       </div>
@@ -186,32 +205,34 @@
   <div class="container">
     <div class="row">
       <div class="col od-copyright-social-flex">
-        <p class="text-center  od-Copyright float-left mt-1"> O <a class="text-purple" [routerLink]="['/']">Octadesk</a> é um <a class="text-purple" [routerLink]="['/atendimento-ao-cliente']">Sistema de atendimento ao cliente</a>          e <a class="text-purple" [routerLink]="['/help-desk']">Help desk</a> focado em entregar resultados. &copy; 2017
-          Octadesk. Todos os direitos reservados. |
+        <p class="text-center  od-Copyright float-left mt-1"> O
+          <a class="text-purple" [routerLink]="['/']">Octadesk</a> é um
+          <a class="text-purple" [routerLink]="['/atendimento-ao-cliente']">Sistema de atendimento ao cliente</a> e
+          <a class="text-purple" [routerLink]="['/help-desk']">Help desk</a> focado em entregar resultados. &copy; 2017 Octadesk. Todos os direitos reservados. |
           <a class="text-purple" [routerLink]="['/politica-de-privacidade']">Política de privacidade</a> |
           <a class="text-purple" [routerLink]="['/termo-de-uso']">Termo de uso</a>
         </p>
         <nav class="od-Social float-right">
           <a class="od-Social-link od-Social-link--facebook" title="facebook" target="_blank" href="https://www.facebook.com/octadesk">
-							<span class="sr-only">facebook</span>
-							<i class="icon-facebook"></i>
-						</a>
+            <span class="sr-only">facebook</span>
+            <i class="icon-facebook"></i>
+          </a>
           <a class="od-Social-link od-Social-link--twitter" title="twitter" target="_blank" href="https://twitter.com/octadesk">
-							<span class="sr-only">twitter</span>
-							<i class="icon-twitter"></i>
-						</a>
+            <span class="sr-only">twitter</span>
+            <i class="icon-twitter"></i>
+          </a>
           <a class="od-Social-link od-Social-link--googlePlus" title="google plus" target="_blank" href="https://plus.google.com/118339634618037369241">
-							<span class="sr-only">google plus</span>
-							<i class="icon-google-plus"></i>
-						</a>
+            <span class="sr-only">google plus</span>
+            <i class="icon-google-plus"></i>
+          </a>
           <a class="od-Social-link od-Social-link--linkedin" title="linkedin" target="_blank" href="https://www.linkedin.com/company/octadesk">
-							<span class="sr-only">linkedin</span>
-							<i class="icon-linkedin"></i>
-						</a>
+            <span class="sr-only">linkedin</span>
+            <i class="icon-linkedin"></i>
+          </a>
           <a class="od-Social-link od-Social-link--youtube" title="youtube" target="_blank" href="https://www.youtube.com/channel/UCYUOmC3uu-klxdHEbruhb2g">
-							<span class="sr-only">youtube</span>
-							<i class="icon-youtube"></i>
-						</a>
+            <span class="sr-only">youtube</span>
+            <i class="icon-youtube"></i>
+          </a>
         </nav>
       </div>
     </div>

@@ -1,0 +1,26 @@
+<octadesk-modal></octadesk-modal>
+					<ng-template #siteModalConsultoresCasosDeSucesso let-c="close" let-d="dismiss">
+						<!-- Fale com nossos consultores -->
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="om-OctadeskModal-hidden">
+							<defs>
+								<g id="om-OctadeskModal-icon--close">
+									<path d="M614.4 512l390.4-390.4c25.6-25.6 25.6-70.4 0-102.4-25.6-25.6-70.4-25.6-102.4 0l-390.4 390.4-390.4-390.4c-25.6-25.6-70.4-25.6-102.4 0-25.6 25.6-25.6 70.4 0 102.4l390.4 390.4-390.4 390.4c-25.6 25.6-25.6 70.4 0 102.4 25.6 25.6 70.4 25.6 102.4 0l390.4-390.4 390.4 390.4c25.6 25.6 70.4 25.6 102.4 0 25.6-25.6 25.6-70.4 0-102.4l-390.4-390.4z"></path>
+								</g>
+							</defs>
+						</svg>
+						<div class="om-OctadeskModal-highlight om-OctadeskModal-cf">
+							<img src="/assets/images/modais/fale-com-nossos-consultores.png" alt="Fale com nossos consultores" title="Fale com nossos consultores">
+						</div>
+						<div class="om-OctadeskModal-content om-OctadeskModal-content--gray om-OctadeskModal-content--w60">
+							<h2 class="om-OctadeskModal-h2">Fale com nossos consultores</h2>
+                			<p class="om-OctadeskModal-text om-OctadeskModal-text--small mb-1-8">Conheça o Octadesk e como podemos ajudar sua empresa.</p>
+							<octadesk-request-form [gtm-form-id]="GtmFormId" [rd-identificador]="'site-modal-consultores-casos-de-sucesso'" [submit-text]="'Solicitar demonstração'" (onSubmitted)="onSubmitted($event)"></octadesk-request-form>
+						</div>
+						<button type="button" class="om-OctadeskModal-close" title="close" aria-label="Close" (click)="d('Cross click')">
+							<svg viewBox="0 0 1024 1024" width="13" height="13">
+								<use xlink:href="#om-OctadeskModal-icon--close"></use>
+							</svg>
+						</button>
+					</ng-template>
+					<success-contact-template></success-contact-template>
+					<ng-template ngbModalContainer></ng-template>

@@ -1,22 +1,35 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { TransferHttpCacheModule } from '@nguniversal/common';
+
+//angular bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import {TransferHttpCacheModule} from '@nguniversal/common';
+
+//partials
+import { PartialsModule } from './partials/partials.module';
+
+//layout core structures
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({appId: 'my-app'}),
+    BrowserModule.withServerTransition({ appId: 'my-app' }),
+    NgbModule.forRoot(),
+    PartialsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full'},
-      { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
-      { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
+      { path: '', loadChildren: './home/home.module#HomeModule' },
+      { path: 'funcionalidades/atendimento-ao-cliente', loadChildren: './features/features.module#FeaturesModule' },
+      { path: 'planos/sistema-de-chamados', loadChildren: './pricing/pricing.module#PricingModule' },
+      { path: 'materiais-para-helpdesk', loadChildren: './materials/materials.module#MaterialsModule' }
     ]),
     TransferHttpCacheModule,
   ],

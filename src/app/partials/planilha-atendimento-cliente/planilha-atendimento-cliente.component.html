@@ -1,0 +1,12 @@
+<img src="/assets/images/materials/planilha-para-helpdesk.jpg" alt="checklist de atendimento ao cliente" width="100%">
+<h4>Checklist</h4>
+<h4 class="u-fontThin"> Agilidade e qualidade <br> no atendimento ao cliente</h4>
+<button type="button" gtm-identificator="planilha-checklist-atendimento" (click)="downloadPlanilhaModal()" class="mt-1 btn btn-warning cursor-pointer">Baixar Planilha</button>
+<octadesk-form-modal
+  [material-url]="'https://d335luupugsy2.cloudfront.net/cms/files/16315/1495823483checklist-de-atendimento-ao-cliente-octadesk.xlsx?utm_source=site&utm_medium=button-site&utm_term=pagina-materiais&utm_content=lightbox&utm_campaign=Planilhas'"
+  [gtm-form-id]="'planilha-checklist-atendimento'"
+  [rd-identificator]="'site-materiais-planilha-atendimento-octadesk'"
+  [modal-title]="'Checklist: Agilidade e qualidade no atendimento ao cliente'"
+  [modal-submit-text]="'Baixar Planilha'">
+</octadesk-form-modal>
+

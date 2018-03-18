@@ -7,8 +7,8 @@ import { ModalDirective } from '../../partials/modals/modal.directive';
 import { ContactConsultoresModalComponent } from '../../partials/modals/contact-consultores/contact-consultores-modal.component';
 
 @Component({
-    moduleId: module.id,
-    selector: 'octadesk-footer',
+	moduleId: module.id,
+	selector: 'octadesk-footer',
 	templateUrl: './footer.component.html',
 	providers: [
 		ModalDirective,
@@ -21,13 +21,13 @@ export class FooterComponent {
 	@ViewChild(ModalDirective) modal;
 	@ViewChild(ContactConsultoresModalComponent) contactModal: ContactConsultoresModalComponent;
 
-	 open(content) {
-        this.modal.open(content);
-    }
+	open(content) {
+		this.modal.open(content);
+	}
 
 	openContactModal() {
-			this.contactModal.open();
-		}
+		this.contactModal.open();
+	}
 
-	constructor (public router : Router, @Inject(PLATFORM_ID) private platformId: Object) {}
+	constructor(public router: Router, @Inject(PLATFORM_ID) private platformId: Object) { }
 }

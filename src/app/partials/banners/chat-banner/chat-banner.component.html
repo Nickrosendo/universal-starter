@@ -1,0 +1,46 @@
+<div class="container od-TablePricing">
+  <div class="row">
+
+    <div class="col-md-12 col-lg-7 col-xl-7">
+      <a [routerLink]="['/chat-para-site']" class="cursor-pointer pricing-anchors">
+        <div class="od-TablePricing-left od-TablePricing-left--gray">
+          <span class="PanelCard-left">
+                      <span class="PanelCard-leftBevel"></span> Novidade
+          </span>
+
+          <h1>
+            <span class="u-fontThin">Octa</span>Chat
+
+            <span class="icon-bubble2 text-primary od-Chat-bubble">
+                      <div class="od-Chat-exclamation">
+                        <span class="u-bgWhite od-Chat-exclamation-bg"></span>
+                        <i class="icon-exclamation-circle text-warning od-Chat-exclamation-icon"></i>
+                      </div>
+            </span>
+
+          </h1>
+          <h4 class="u-fontThin">Deixe seu Octadesk mais poderoso.<span class="text-info u-font-W500"> Saiba Mais<i class="icon-next"> </i></span></h4>
+        </div>
+
+        <div class="div_triangle_left_grey"></div>
+        <div class="od-div-fill"></div>
+        <div class="div_triangle_left_white"></div>
+      </a>
+
+    </div>
+
+    <div class="col-md-12 col-lg-5 col-xl-5">
+      <a class="cursor-pointer pricing-anchors" (click)="openContactModal()">
+        <octadesk-contact-consultores-modal [gtm-form-id]="'fale-com-nossos-consultores-header'" [rd-identificator]="'site-modal-contact'" ></octadesk-contact-consultores-modal>
+
+        <div class="od-TablePricing-right text-center u-bgWhite">
+          <h6>Adicione o OctaChat ao seu plano </h6>
+          <div class="od-ChoosePlan-item-detail-consulting u-font-W700 text-info">
+            consulte-nos
+          </div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<section *ngFor="let section of sections" class="od-CommonQuestions">
+	<header class="od-CommonQuestions-header">
+		<h6 class="text-info">{{section.name}}</h6>
+	</header>
+
+	<ngb-accordion [closeOthers]="true" *ngFor="let article of articles | filterBy:{section:section.code}">
+		<ngb-panel id="{{article.index}}" class="od-CommonQuestions-panel">
+			<ng-template ngbPanelTitle>
+        <div class="od-CommonQuestions-title">
+          <i class="icon-shrink text-warning"></i>
+          <i class="icon-expand text-warning"></i>
+          {{article.question}}
+        </div>
+			</ng-template>
+			<ng-template ngbPanelContent>
+				<div class="od-CommonQuestions-text">{{article.answer}}</div>
+			</ng-template>
+		</ngb-panel>
+	</ngb-accordion>
+
+</section>

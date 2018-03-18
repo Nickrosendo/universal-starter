@@ -1,0 +1,104 @@
+<form  [id]="GtmFormIdentificator" *ngIf="!SubSucces" class="mt-2" [formGroup]="form" novalidate (ngSubmit)="onSubmit($event)" >
+    <input formControlName="token_rdstation" type="hidden" />
+    <input formControlName="identificador" type="hidden" />
+
+	<utm-hidden-fields></utm-hidden-fields>
+
+    <section *ngIf="!SubSucces">
+		<fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.name, 'has-danger': hasDanger.name}">
+			<div class="form-group">
+				<input
+					type="text"
+					class="form-control od-Contact-field" placeholder="Nome *"
+					formControlName="nome"
+					placeholder="Nome *"
+					[(ngModel)]="name"
+					(blur)="validateName($event)"
+					required
+				/>
+				<div class="mt-0 om-OctadeskModal-form-feedback" *ngIf="hasDanger.name">O campo "Nome" precisa ser preenchido.</div>
+			</div>
+		</fieldset>
+		<fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.email, 'has-warning': hasWarning.email, 'has-danger': hasDanger.email}">
+			<div class="form-group">
+				<label class="sr-only" for="od-Contact-email">E-mail</label>
+				<input
+					type="email"
+					class="form-control od-Contact-field"
+					formControlName="email"
+					placeholder="E-mail *"
+					[(ngModel)]="email"
+					(blur)="validateEmail($event)"
+					required
+				/>
+				<div class="mt-0 om-OctadeskModal-form-feedback" *ngIf="hasDanger.email">E-mail inválido. Verifique e digite novamente.</div>
+				<div class="mt-0 om-OctadeskModal-form-feedback" *ngIf="hasWarning.email">Sugerimos a utilização de um e-mail corporativo.</div>
+			</div>
+		</fieldset>
+		<fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.phone, 'has-danger': hasDanger.phone}">
+			<div class="form-group">
+				<input
+					type="text"
+					class="form-control od-Contact-field hidden-md-down w-auto"
+					formControlName="telefone"
+					placeholder="Telefone *"
+					minlength="14"
+					maxlength="15"
+					[(ngModel)]="phone"
+					(blur)="validatePhone()"
+					phone-mask
+					required
+				/>
+				<input
+					type="tel"
+					class="form-control od-Contact-field hidden-lg-up"
+					formControlName="telefone"
+					placeholder="Telefone"
+					minlength="14"
+					maxlength="15"
+					[(ngModel)]="phone"
+					(blur)="validatePhone()"
+					phone-mask
+					required
+				/>
+				<div class="mt-0 om-OctadeskModal-form-feedback" *ngIf="hasDanger.phone">Número de telefone inválido. Verifique e digite novamente.</div>
+			</div>
+		</fieldset>
+		<fieldset class="om-OctadeskModal-form-fieldset" [ngClass]="{'has-success': hasSuccess.message, 'has-danger': hasDanger.message}">
+			<div class="form-group">
+				<textarea
+					class="form-control od-Contact-field"
+					formControlName="message"
+					placeholder="Mensagem *"
+					[(ngModel)]="message"
+					(blur)="validateMessage($event)"
+					required>
+				</textarea>
+				<div class="mt-0 om-OctadeskModal-form-feedback" *ngIf="hasDanger.message">O campo "Mensagem" precisa ser preenchido.</div>
+			</div>
+		</fieldset>
+
+		<div class="od-Contact-actions">
+			<button type="submit" class="btn btn-success">Enviar</button>
+		</div>
+	</section>
+</form>
+<div *ngIf="SubSucces">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="om-OctadeskModal-hidden">
+        <defs>
+            <g id="om-OctadeskModal-icon--checkCircle">
+                <path d="M12,1.5C6.2,1.5,1.5,6.2,1.5,12S6.2,22.5,12,22.5S22.5,17.8,22.5,12S17.8,1.5,12,1.5z M12,21.7c-5.3,0-9.7-4.3-9.7-9.7
+                    S6.7,2.3,12,2.3s9.7,4.3,9.7,9.7S17.3,21.7,12,21.7z" />
+                <path d="M16.9,7.7l-6.2,7l-3.7-3c-0.2-0.1-0.4-0.1-0.6,0.1c-0.1,0.2-0.1,0.4,0.1,0.6l4,3.2c0.1,0.1,0.2,0.1,0.3,0.1
+                    c0.1,0,0.2,0,0.3-0.1l6.5-7.3c0.1-0.2,0.1-0.4,0-0.6C17.4,7.5,17.1,7.5,16.9,7.7z" />
+            </g>
+        </defs>
+    </svg>
+    <div style="width: 100%; border: 1px solid #ddd; border-radius: .25rem;" class="om-OctadeskModal-content om-OctadeskModal-content--w50 om-OctadeskModal-text--center om-OctadeskModal-success">
+        <svg viewBox="0 0 24 24" width="80" height="80">
+            <use xlink:href="#om-OctadeskModal-icon--checkCircle"></use>
+        </svg>
+        <h3 class="om-OctadeskModal-h3">Solicitação enviada<br> com sucesso!</h3>
+        <p>Aguarde, que logo um de nossos<br> consultores entrará em contato.</p>
+    </div>
+</div>

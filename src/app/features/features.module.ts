@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
-import { FeaturesRouting } from './features-routing.module'
-import { FeaturesComponent } from './features.component';
 import { PartialsModule } from '../partials/partials.module';
+import { FeaturesComponent } from './features.component';
 
 @NgModule({
-	imports: [
-		BrowserModule,
-		FeaturesRouting,
-		PartialsModule
-	],
-	declarations: [
-		FeaturesComponent
-	]
+  imports: [
+    CommonModule,
+    PartialsModule,
+    RouterModule.forChild([
+      { path: '', component: FeaturesComponent, pathMatch: 'full' }
+    ])
+  ],
+  declarations: [
+    FeaturesComponent
+  ]
 })
 export class FeaturesModule { }
