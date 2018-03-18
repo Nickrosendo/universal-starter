@@ -20,7 +20,7 @@ export class SuccessStoriesComponent {
     titlle.setTitle('Sistema de Atendimento Octadesk - Veja os casos de sucesso');
     meta.updateTag({ name: 'keywords', content: 'Sistema de atendimento' });
     meta.updateTag({ name: 'description', content: 'Veja os casos de sucesso do nosso Sistema de Atendimento Online. Entenda como nosso Software de Help Desk pode ajudar a sua empresa. Entre em contato e solicite uma demonstração gratuita!' });
-    linkService.addTag({ rel: 'canonical', href: 'https://www.octadesk.com/casos-de-sucesso/sistema-de-atendimento' })
+    linkService.addTag({ rel: 'canonical', href: 'https://www.octadesk.com/casos-de-sucesso/sistema-de-atendimento' });
   }
 
   @ViewChild(ModalDirective) modal;

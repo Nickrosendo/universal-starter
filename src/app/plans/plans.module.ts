@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { PlansRouting } from './plans-routing.module'
+import { PlansRouting } from './plans-routing.module';
 import { PlansComponent } from './plans.component';
 import { DataService } from './data.service';
 import { PartialsModule } from '../partials/partials.module';

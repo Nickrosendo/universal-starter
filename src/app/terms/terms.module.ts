@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { TermsRouting } from './terms-routing.module'
+import { TermsRouting } from './terms-routing.module';
 import { TermsComponent } from './terms.component';
 import { PartialsModule } from '../partials/partials.module';
 

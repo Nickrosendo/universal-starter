@@ -20,7 +20,7 @@ export class ContactComponent {
       name: 'description',
       content: 'Entre em contato com nossos consultores de Atendimento ao Cliente e Help desk. Tire suas dúvidas e descubra como podemos ajudar sua empresa. Solicite uma avaliação gratuita!'
     });
-    linkService.addTag({ rel: 'canonical', href: 'https://www.octadesk.com/contato' })
+    linkService.addTag({ rel: 'canonical', href: 'https://www.octadesk.com/contato' });
   }
 
   @ViewChild(ContactModalComponent) contactModal: ContactModalComponent;

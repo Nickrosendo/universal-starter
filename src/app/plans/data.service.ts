@@ -14,15 +14,15 @@ import { SeaFeatures } from '../../data/plans/sea.data';
 export class DataService {
 	constructor() { }
 
-	getCategories():Array<object> {
+	getCategories(): Array<object> {
 		return [Category];
 	}
 
-	getFeatures():Array<object> {
+	getFeatures(): Array<object> {
 		return [Features];
 	}
 
-	getPlans():Array<object> {
+	getPlans(): Array<object> {
 		return [RiverFeatures, SeaFeatures, OceanFeatures];
 	}
 
