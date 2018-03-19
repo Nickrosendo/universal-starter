@@ -17,6 +17,10 @@ export const routes: Routes = [
   { path: 'concorrentes/zendesk', loadChildren: './landing-pages/zendesk/zendesk.module#ZenDeskModule'},
   { path: 'help-desk', loadChildren: './landing-pages/help-desk/help-desk.module#HelpDeskModule'},
   { path: 'sistema-de-help-desk', loadChildren: './landing-pages/sistema-help-desk/sistema-help-desk.module#SistemaHelpDeskModule'},
-  { path: 'sistema-de-chamados', loadChildren: './landing-pages/sistema-de-chamados/sistema-de-chamados.module#SistemaDeChamadosModule'}
+  { path: 'sistema-de-chamados', loadChildren: './landing-pages/sistema-de-chamados/sistema-de-chamados.module#SistemaDeChamadosModule'},
+  { path: 'cadastro-de-clientes-ad', loadChildren: './landing-pages/campanhas/ad-cadastro-clientes/ad-cadastro-clientes.module#AdCadastroClientesModule'},
+  { path: 'controle-de-clientes-ad', loadChildren: './landing-pages/campanhas/ad-controle-clientes/ad-controle-clientes.module#AdControleClientesModule'},
+  { path: 'gerenciador-de-contatos-ad', loadChildren: './landing-pages/campanhas/ad-gerenciador-contatos/ad-gerenciador-contatos.module#AdGerenciadorContatosModule'},
+  { path: 'gerenciador-de-contatos-adb', loadChildren: './landing-pages/campanhas/ad-gerenciador-contatosb/ad-gerenciador-contatosb.module#AdGerenciadorContatosModule'},
 ];
 
