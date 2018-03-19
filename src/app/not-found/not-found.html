@@ -1,0 +1,69 @@
+<section id="error-view">
+	<article class="od-Wrapper u-bg404">
+		<div class="container od-Error">
+			<div class="row">
+				<div class="col">
+					<h1 class="u-fontThin text-info mb-3">Ooops!</h1>
+					<h3 class="u-fontThin">Não conseguimos encontrar a<br>página que você está procurando.</h3>
+					<h4 class="u-fontThin my-3">Talvez você esteja procurando por:</h4>
+					<ul class="od-ListType">
+						<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+							<a class="od-ListType-link" [routerLink]="['/']">Página Inicial</a>
+						</li>
+						<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+							<a class="od-ListType-link" [routerLink]="['/funcionalidades/atendimento-ao-cliente']">Funcionalidades</a>
+						</li>
+						<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+							<a class="od-ListType-link" [routerLink]="['/casos-de-sucesso/sistema-de-atendimento']">Casos de Sucesso</a>
+						</li>
+						<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+							<a class="od-ListType-link" [routerLink]="['/planos/sistema-de-chamados']">Planos</a>
+						</li>
+						<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+							<a class="od-ListType-link" [routerLink]="['/materiais-para-helpdesk']">Materiais</a>
+						</li>
+						<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+							<a class="od-ListType-link" [routerLink]="['/comparativo/controle-de-chamados']">Comparativo de Planos</a>
+						</li>
+						<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+							<a class="od-ListType-link u-linkStyles" (click)="openTrialModal()">Avalie Grátis</a>
+							<try-octadesk-modal [rd-identificator]="'form-trial-experimente-o-octadesk'"></try-octadesk-modal>
+						</li>
+						<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+							<a class="od-ListType-link" [routerLink]="['/contato']">Contato</a>
+						</li>
+						<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+							<a class="od-ListType-link" [routerLink]="['/materials']">Materiais</a>
+						</li>
+						<li class="od-ListType-item">
+								<ngb-accordion [closeOthers]="true">
+									<ngb-panel class="od--panel">
+										<ng-template ngbPanelTitle class="od--title">
+											<h6><strong>Landing Pages</strong></h6>
+										</ng-template>
+										<ng-template ngbPanelContent class="od--text">
+											<ul class="od-ListType od-ListType--fontSmall">
+												<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+													<a class="od-ListType-link" [routerLink]="['/atendimento-ao-cliente']">Atendimento ao cliente</a>
+												</li>
+												<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+													<a class="od-ListType-link" [routerLink]="['/sistema-de-chamados']">Sistema de chamados</a>
+												</li>
+												<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+													<a class="od-ListType-link" [routerLink]="['/help-desk']">Help desk</a>
+												</li>
+												<li class="od-ListType-item od-ListType-item--arrow od-ListType-item--bulletWarning">
+													<a class="od-ListType-link" [routerLink]="['/chat-para-site']">Chat</a>
+												</li>
+											</ul>
+										</ng-template>
+
+									</ngb-panel>
+								</ngb-accordion>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</article>
+</section>

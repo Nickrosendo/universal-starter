@@ -1,0 +1,155 @@
+<section id="zendesk-lp">
+	<!-- header -->
+	<header class="od-Wrapper od-Header od-Header--lp od-Header--bgLPZenDesk">
+		<div class="container h-100">
+			<div class="row d-flex align-items-center h-100">
+				<div class="col-sm-8 col-md-7 col-xl-6">
+					<h1>
+						<span class="u-fontThin">Conheça o</span> Octadesk.<br>
+						<span class="u-fontThin">A</span> melhor alternativa <span class="u-fontThin">para<br>substituir o Zendesk.</span>
+					</h1>
+					<button type="button" gtm-identificator="experimente-gratis-header" class="btn btn-warning" (click)="openTrialModal()">Avalie grátis</button>
+					<try-octadesk-modal [gtm-form-id]="FormId" [rd-identificator]="'form-trial-experimente-o-octadesk'"></try-octadesk-modal>
+					<i class="icon-arrow-top-left"></i>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- advantage -->
+	<article class="od-Wrapper u-bgDarkGrey">
+		<div class="container od-Advantage text-white">
+			<div class="row">
+				<div class="col text-center">
+					<h2 class="h1"><span class="u-fontThin">Confira as</span> principais vantagens <span class="u-fontThin">do <br class="hidden-xs-down">Octadesk em relação ao Zendesk</span></h2>
+				</div>
+			</div>
+			<div class="row d-flex align-items-center">
+				<div class="col-6 col-sm-3 text-center">
+					<div class="od-Advantage-thumb mt-3">
+						<i class="icon-brazil-flag-o"></i>
+					</div>
+					<p>100% brasileiro e <br>em português</p>
+				</div>
+				<div class="col-6 col-sm-3 text-center">
+					<div class="od-Advantage-thumb mt-3">
+						<i class="icon-agent-o"></i>
+					</div>
+					<p>Suporte local dedicado <br class="hidden-md-down">por telefone ou e-mail</p>
+				</div>
+				<div class="col-6 col-sm-3 text-center">
+					<div class="od-Advantage-thumb mt-3">
+						<i class="icon-pig-safe-o"></i>
+					</div>
+					<p>Metade do preço do Zendesk <br>(Planos Sea e Ocean)</p>
+				</div>
+				<div class="col-6 col-sm-3 text-center">
+					<div class="od-Advantage-thumb mt-3">
+						<i class="icon-credit-card-o"></i>
+					</div>
+					<p>Pague em reais no boleto ou <br class="hidden-xs-down">cartão de crédito com<br>Nota Fiscal</p>
+				</div>
+			</div>
+			<div class="row d-flex align-items-center">
+				<div class="col-6 col-sm-3 text-center">
+					<div class="od-Advantage-thumb mt-3">
+						<i class="icon-workflow-o"></i>
+					</div>
+					<p>Workflow <br>avançado</p>
+				</div>
+				<div class="col-6 col-sm-3 text-center">
+					<div class="od-Advantage-thumb mt-3">
+						<i class="icon-brain-o"></i>
+					</div>
+					<p>Formulários <br>inteligentes</p>
+				</div>
+				<div class="col-6 col-sm-3 text-center">
+					<div class="od-Advantage-thumb mt-3">
+						<i class="icon-gift-o"></i>
+					</div>
+					<p>Catálogo de produtos <br>e serviços</p>
+				</div>
+				<div class="col-6 col-sm-3 text-center">
+					<div class="od-Advantage-thumb mt-3">
+						<i class="icon-donut-chart-o"></i>
+					</div>
+					<p>Facilidade de customização <br>de relatórios</p>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+	<!-- plans-from -->
+	<article class="od-Wrapper u-bgOrangeX">
+		<octadesk-plans-from [texto]="'Planos para todos os tipos e tamanhos de empresa'" [texto-botao]="'Conheça nossos planos'"></octadesk-plans-from>
+	</article>
+
+	<!-- dollar -->
+	<article class="od-Wrapper u-bgWhite">
+		<div class="container od-Dollar">
+			<div class="row">
+				<div class="col text-center">
+					<h2 class="h1 u-fontThin">Fuja do pagamento em dólar</h2>
+					<p class="mt-2"><strong>Ao utilizar serviços cobrados em dólar, como é o caso da Zendesk, você está sujeito a variação cambial e ainda tem que recolher:</strong></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="jumbotron py-3">
+						<ul class="od-ListType">
+							<li class="od-ListType-item od-ListType-item--bullet">6,38% de IOF - imposto sobre operações financeiras (Cobrado diretamente no cartão de crédito)</li>
+							<li class="od-ListType-item od-ListType-item--bullet">17,5% de IR - Imposto de renda (Recolhimento manual)</li>
+							<li class="od-ListType-item od-ListType-item--bullet">3,65% de PIS - Programa de integração social (Recolhimento manual)</li>
+							<li class="od-ListType-item od-ListType-item--bullet">7,60% de Cofins - Contribuição para Financiamento da Seguridade Social (Recolhimento manual)</li>
+							<li class="od-ListType-item od-ListType-item--bullet">5% de ISS - Imposto Sobre Serviços (Recolhimento manual)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<p class="text-info"><strong>Todos esses impostos juntos, somam mais de 40% de tributos e caso as guias de recolhimento não sejam pagas, você estará sujeito a ser autuado pelo fisco.</strong></p>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<!-- why octadesk -->
+	<article class="od-Wrapper od-Wrapper--cb u-bgGrayGeometric u-o-hidden">
+		<octadesk-why-octadesk></octadesk-why-octadesk>
+	</article>
+
+	<!-- curt features -->
+	<article class="od-Wrapper u-bgWhite">
+		<div class="container od-WhatIsOctades">
+			<div class="row">
+				<div class="col text-center">
+					<h2 class="h1 u-fontThin">Funcionalidades para facilitar o dia a dia do seu Help Desk</h2>
+				</div>
+			</div>
+			<octadesk-curt-features [area]="'getLpConcorrentesCurtFeatures'"></octadesk-curt-features>
+		</div>
+	</article>
+
+	<!-- many more features -->
+	<article class="od-Wrapper u-bgPurple">
+		<octadesk-many-more></octadesk-many-more>
+	</article>
+
+	<!-- customers -->
+	<article class="od-Wrapper u-bgWhite">
+		<octadesk-customers></octadesk-customers>
+	</article>
+
+	<!-- statement -->
+	<article class="od-Wrapper od-Wrapper--ct u-bgWhite">
+		<octadesk-statement></octadesk-statement>
+	</article>
+
+	<!-- metrics -->
+	<article class="od-Wrapper u-bgLightGray u-o-hidden">
+		<octadesk-metrics></octadesk-metrics>
+	</article>
+
+</section>

@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 
-import { TermsComponent } from './terms.component';
+import { NotFoundComponent } from './not-found.component';
 import { PartialsModule } from '../partials/partials.module';
 
 @NgModule({
   imports: [
+    NgbModule,
     PartialsModule,
     RouterModule.forChild([
-      { path: '', component: TermsComponent, pathMatch: 'full' }
+      { path: '', component: NotFoundComponent, pathMatch: 'full' }
     ]),
   ],
   declarations: [
-    TermsComponent
+    NotFoundComponent
   ]
 })
-export class TermsModule { }
+export class NotFoundModule { }
